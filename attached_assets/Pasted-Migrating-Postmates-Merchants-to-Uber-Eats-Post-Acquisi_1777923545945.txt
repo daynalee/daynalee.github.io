@@ -1,0 +1,71 @@
+Migrating Postmates Merchants to Uber Eats Post Acquisition
+
+OVERVIEW
+Following Uber's acquisition of Postmates, we faced major challenges integrating the 2 systems and migrating merchants from Postmates to Uber Eats platform without disrupting their operations or compromising their satisfaction. This case study focuses on cross functional collaberation and system integration required to successfully migrate thousands of accounts.
+
+Context
+
+PROBLEM STATEMENT
+Uber needed to migrate thousands of Postmates merchant accounts to Uber Eats without disrupting operations, losing merchant trust, or compromising order reliability while building internal scalable systems to support future partner migrations. 
+
+
+MY ROLE 
+I was responsible for partnering cross functionally with teams to transition account data and ensure merchant readiness, reduce time to activation, and enable 100% of accounts successfully able to use Eats platform.
+Role: Client Success Operations Specialist
+Team: Eats Client Success Ops US&C
+Timeframe: Q1 2022 – Q2 2022
+Scope: U.S. & Canada (US&C) Merchants
+Collaborators: AMs, Legal, PEng, Product, FRM
+Research
+
+
+ARCHITECTURE AUDIT
+Audited postmates merchant structure and current onboarding workflow and pain points to assess compatability with Uber's systems
+
+SYSTEM GAP ANALYSIS
+Identified API gaps, outdated hierarchies, service area mismatches, unscalable workflows, fragmented tools, inconsistent data practices
+
+CLIENT AWARENESS AND INVOLVEMENT
+Defined partner's current level of involvement with managing their account data and activation process as well as their comfort with onboarding tools and their dashboards
+
+BILLING PRACTICES AND CAMPAIGNS
+Reviewed standard pricing structures and incentives available to postmates merchants via their contracts and identified non supported promotions and pricing
+
+MONITORING & TESTING
+Identified testing procedures and test account creation to validate migrated data and prepare for first cohort of migrated accounts and ensure no service disruptions
+
+
+Metrics For Success
+
+X% increase in OTR , X% accounts onboarded to Eats, X% decrease in support tickets
+
+Challenges
+
+When courier issues or API integrations arose merchants were unaware of backend work required for fix 
+
+Communications shared with merchants in terms of new processes led to merchant confusion and decreased merchant trust 
+Billing Structure Incompatability
+No centralized sytem to track migration progress or enforce best practices 
+
+Building new process and integrating with Postmates Legacy  Team which means unclear delegation of responsibilities and loss of information during communciation
+Ubers pricing implementation tooling did not support the same tiered and variable pricing structures that postmates did
+
+Merchants were contractually signed to specific pricing so Uber has low flexibility on price changes without proper documentation updates
+Postmates zoning and serviceability areas included plots that Eats tagged as non serviceable
+
+Defined areas of specific zones and zone names not matching or with some overlap 
+Approach 
+Phase 1 Data Migration & Systems Alignment
+Phase 2 Onboarding Optimization & Merchant Experience
+Results
+
+
+Migrated 100%  of postmates accounts by Q2 with minimal disruption to buisness and partners 
+
+Backfilled data and integrated multiple systems enabling accurate tracking of merchant data and increase in time required to onboard and perform testing
+
+94% OTR reliablity for accounts migrated meaning that our systems courier dispatching logic and segmentation was accurate and sytems were integrated correctly
+
+70% of Merchants on Supported Pricing Merchants were compliant during transition and post agreeing on new pricing terms and incentives were willing to sign new contracts that enabled standard pricing rules to be used across their stores. Non compliant merchants remained on alternative billing while AM's continued to find alignment.
+
+Created Bulk Tooling with eng which enabled faster data migrations with more checks in place to reduce manual error from data transferring. These new bulk actions support scalable changes to legacy postmates accounts.
