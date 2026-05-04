@@ -4,18 +4,33 @@ import { ArrowUpRight } from "lucide-react";
 
 const experiences = [
   {
-    role: "Client Success & Revenue Operations",
-    company: "Uber",
-    teams: "Uber Direct · Uber Eats",
-    period: "2020 — 2023",
-    summary: "Led revenue recovery and large-scale account migration across two major Uber divisions — driving measurable impact through cross-functional process design.",
+    role: "Monetization Operations",
+    company: "Uber Direct",
+    teams: "Uber · Uber Direct",
+    period: "2021 — 2023",
+    summary: "Founder of monetization operations on Uber Direct, managing 500+ merchant hierarchies across countries, generating $16M in monthly invoices, recovering $7M in delinquent balances, and driving invoice automation from 0% to 96% through data-driven systems integration.",
     highlights: [
-      { metric: "$7M", detail: "Recollected in previously uncollectible credit card merchant balances through a new billing and penalty framework" },
-      { metric: "1,000+", detail: "Postmates accounts migrated to Uber Eats with zero churn following Uber's acquisition" },
-      { metric: "X-functional", detail: "Partnered with Finance, Product, and Legal to close systemic gaps in monetization workflows" },
+      { metric: "500+", detail: "Merchant hierarchies managed across multiple countries" },
+      { metric: "$16M", detail: "In monthly invoices generated through scalable billing operations" },
+      { metric: "$7M", detail: "In delinquent balances recovered" },
+      { metric: "0% → 96%", detail: "Invoice automation achieved through data-driven systems integration" },
     ],
     caseStudies: [
       { slug: "uber-direct", label: "Uber Direct Case Study" },
+    ],
+  },
+  {
+    role: "Client Success & Onboarding Ops",
+    company: "Uber Eats",
+    teams: "Uber · Uber Eats",
+    period: "2020 — 2021",
+    summary: "Managed onboarding for 1000+ Postmates merchants, handling serviceability, pricing setup, and contract updates. Hosted demos and partnered cross functionally to automate self-serve onboarding, while creating guides to streamline future processes.",
+    highlights: [
+      { metric: "1,000+", detail: "Postmates merchants onboarded to Uber Eats" },
+      { metric: "Self-serve", detail: "Onboarding automation built in partnership with cross-functional teams" },
+      { metric: "Guides", detail: "Created to standardize and streamline future onboarding processes" },
+    ],
+    caseStudies: [
       { slug: "uber-eats", label: "Uber Eats Case Study" },
     ],
   },
