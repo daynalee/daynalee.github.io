@@ -178,34 +178,138 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "uber-eats",
     company: "Uber Eats",
-    title: "Postmates to Uber Eats Account Migration",
-    tagline: "Migrated 1,000+ accounts from Postmates to Uber Eats with zero churn and no service disruption.",
+    title: "Migrating Postmates Merchants to Uber Eats Post Acquisition",
+    tagline: "Migrated 100% of Postmates merchant accounts to Uber Eats by Q2 with 94% OTR reliability and minimal disruption to operations or partner trust.",
     category: "Real Case",
-    heroMetric: { value: "1,000+", label: "Accounts Migrated" },
+    heroMetric: { value: "100%", label: "Accounts Migrated" },
     stats: [
-      { value: "1,000+", label: "Accounts Migrated" },
-      { value: "0", label: "Churn" },
-      { value: "Seamless", label: "Transition" },
+      { value: "100%", label: "Accounts Migrated by Q2" },
+      { value: "94%", label: "OTR Reliability" },
+      { value: "70%", label: "On Supported Pricing" },
     ],
-    role: "Client Success & Revenue Operations",
-    duration: "2020 — 2023",
+    role: "Client Success Operations Specialist",
+    team: "Eats Client Success Ops US&C",
+    timeframe: "Q1 2022 – Q2 2022",
+    scope: "U.S. & Canada (US&C) Merchants",
+    collaborators: "AMs, Legal, PEng, Product, FRM",
+    duration: "Q1 2022 – Q2 2022",
     overview:
-      "Following Uber's acquisition of Postmates, I was responsible for migrating over 1,000 restaurant accounts from the Postmates platform to Uber Eats — a high-stakes transition requiring precise coordination across ops, product, and partner success.",
+      "Following Uber's acquisition of Postmates, we faced major challenges integrating two systems and migrating merchants from the Postmates platform to Uber Eats without disrupting their operations or compromising their satisfaction. This case study focuses on the cross-functional collaboration and system integration required to successfully migrate thousands of accounts.",
+
+    context: {
+      problemStatement:
+        "Uber needed to migrate thousands of Postmates merchant accounts to Uber Eats without disrupting operations, losing merchant trust, or compromising order reliability — while building internal scalable systems to support future partner migrations.",
+      myRole:
+        "I was responsible for partnering cross-functionally with teams to transition account data and ensure merchant readiness, reduce time to activation, and enable 100% of accounts to successfully use the Eats platform.",
+      goals: {
+        primary: "Migrate 100% of Postmates accounts to Uber Eats with no disruption to merchant operations or order reliability",
+        secondary: [
+          "Correct account data gaps and ensure compatibility with Uber's systems",
+          "Reduce time to activation per account through scalable tooling",
+          "Standardize pricing, billing, and zoning for all migrated merchants",
+        ],
+      },
+    },
+
+    research: {
+      items: [
+        {
+          label: "Architecture Audit",
+          detail:
+            "Audited Postmates merchant structure and current onboarding workflow and pain points to assess compatibility with Uber's systems.",
+        },
+        {
+          label: "System Gap Analysis",
+          detail:
+            "Identified API gaps, outdated hierarchies, service area mismatches, unscalable workflows, fragmented tools, and inconsistent data practices across the two platforms.",
+        },
+        {
+          label: "Client Awareness and Involvement",
+          detail:
+            "Defined each partner's current level of involvement with managing their account data and activation process, as well as their comfort with onboarding tools and dashboards.",
+        },
+        {
+          label: "Billing Practices and Campaigns",
+          detail:
+            "Reviewed standard pricing structures and incentives available to Postmates merchants via their contracts and identified non-supported promotions and pricing structures.",
+        },
+        {
+          label: "Monitoring and Testing",
+          detail:
+            "Identified testing procedures and test account creation to validate migrated data, prepare for the first cohort, and ensure no service disruptions at launch.",
+        },
+      ],
+      metrics: [
+        "% increase in OTR",
+        "% accounts onboarded to Eats",
+        "% decrease in support tickets",
+      ],
+    },
+
+    challenges: {
+      groups: [
+        {
+          label: "Merchant Communication and Trust",
+          items: [
+            "When courier issues or API integrations arose, merchants were unaware of the backend work required for a fix",
+            "Communications shared with merchants about new processes led to confusion and decreased merchant trust",
+          ],
+        },
+        {
+          label: "Billing and Pricing",
+          items: [
+            "Uber's pricing implementation tooling did not support the same tiered and variable pricing structures that Postmates did",
+            "Merchants were contractually signed to specific pricing, giving Uber low flexibility on changes without proper documentation updates",
+          ],
+        },
+        {
+          label: "Systems and Data",
+          items: [
+            "No centralized system to track migration progress or enforce best practices",
+            "Postmates zoning and serviceability areas included plots that Eats tagged as non-serviceable",
+            "Zone names and defined areas did not match or had overlap between platforms",
+          ],
+        },
+        {
+          label: "Org and Process",
+          items: [
+            "Building new processes and integrating with the Postmates Legacy Team created unclear delegation of responsibilities",
+            "Loss of information during communication handoffs between teams slowed execution",
+          ],
+        },
+      ],
+    },
+
     problem:
-      "Post-acquisition, Postmates restaurant partners needed to be moved to Uber Eats without disrupting their business operations, revenue, or customer relationships. Any friction risked partner churn and revenue loss at scale.",
+      "Thousands of Postmates merchant accounts needed to move to Uber Eats without disrupting operations, trust, or revenue. System incompatibilities, billing structure gaps, zoning mismatches, and unclear team ownership made a clean migration extremely difficult.",
+
     approach: [
-      { step: "Segmentation", detail: "Categorized the 1,000+ accounts by complexity, revenue tier, and risk of churn to sequence the migration intelligently." },
-      { step: "Communication playbook", detail: "Developed a partner communication strategy that explained the change clearly, addressed common objections, and set accurate expectations." },
-      { step: "Hands-on support", detail: "Provided dedicated support to high-value accounts through onboarding — menu transfers, settings review, and first-week check-ins." },
-      { step: "Monitoring & follow-up", detail: "Tracked post-migration performance metrics and intervened proactively when early signals of dissatisfaction appeared." },
+      {
+        step: "Phase 1: Data Migration and Systems Alignment",
+        detail:
+          "Audited and corrected account data across both platforms, resolved API and zoning gaps with Engineering, and created test cohorts to validate data integrity before full migration. Built centralized tracking to monitor migration progress and enforce data standards.",
+      },
+      {
+        step: "Phase 2: Onboarding Optimization and Merchant Experience",
+        detail:
+          "Streamlined the activation workflow to reduce time to launch per account. Coordinated with AMs to communicate clearly with merchants, address billing and pricing concerns, and support contract updates for non-compliant pricing. Created merchant-facing resources to reduce confusion and inbound support volume.",
+      },
+      {
+        step: "Bulk Tooling with Engineering",
+        detail:
+          "Co-designed and launched bulk migration tooling with Engineering that enabled faster data transfers with built-in validation checks, reducing manual error and supporting scalable changes to legacy Postmates accounts.",
+      },
     ],
+
     results: [
-      "1,000+ accounts successfully migrated to Uber Eats",
-      "Zero churn attributable to the migration process",
-      "Maintained partner revenue continuity throughout transition",
-      "Created reusable migration playbook for future platform consolidations",
+      "Migrated 100% of Postmates accounts by Q2 with minimal disruption to business and partners",
+      "94% OTR reliability for migrated accounts, confirming courier dispatching logic, segmentation, and system integrations were accurate",
+      "70% of merchants moved onto supported pricing through contract updates and alignment with AMs on new terms",
+      "Backfilled data and integrated multiple systems enabling accurate tracking of merchant data and reduced time to onboard",
+      "Bulk tooling built with Engineering enabled faster data migrations with more checks in place, reducing manual error and supporting future scalable migrations",
     ],
-    tags: ["Account Management", "Change Management", "Client Success", "Operations"],
+
+    tags: ["Account Migration", "Systems Integration", "Client Success", "Cross-functional", "Change Management"],
   },
   {
     slug: "pacific-pain",

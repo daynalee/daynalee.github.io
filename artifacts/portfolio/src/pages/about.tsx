@@ -84,8 +84,7 @@ export default function About() {
               <h3 className="text-xs font-bold uppercase tracking-widest text-muted-foreground">{group.category}</h3>
               <ul className="space-y-2">
                 {group.items.map((item) => (
-                  <li key={item} className="text-sm text-foreground/80 flex items-start gap-2">
-                    <span className="text-primary mt-1 font-bold text-xs">—</span>
+                  <li key={item} className="text-sm text-foreground/80">
                     {item}
                   </li>
                 ))}

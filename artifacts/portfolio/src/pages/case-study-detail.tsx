@@ -142,8 +142,7 @@ export default function CaseStudyDetail() {
                       <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Secondary</span>
                       <ul className="space-y-1.5 mt-1">
                         {study.context.goals.secondary.map((g, i) => (
-                          <li key={i} className="flex items-start gap-2 text-sm text-foreground/75">
-                            <span className="text-primary font-bold mt-0.5">—</span>
+                          <li key={i} className="text-sm text-foreground/75">
                             {g}
                           </li>
                         ))}
