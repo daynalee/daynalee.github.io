@@ -7,8 +7,24 @@ export type CaseStudy = {
   heroMetric: { value: string; label: string };
   stats: { value: string; label: string }[];
   role: string;
+  team?: string;
+  timeframe?: string;
+  scope?: string;
+  collaborators?: string;
   duration: string;
   overview: string;
+  context?: {
+    problemStatement: string;
+    myRole: string;
+    goals: { primary: string; secondary: string[] };
+  };
+  research?: {
+    items: { label: string; detail: string }[];
+    metrics?: string[];
+  };
+  challenges?: {
+    groups: { label: string; items: string[] }[];
+  };
   problem: string;
   approach: { step: string; detail: string }[];
   results: string[];
@@ -20,33 +36,144 @@ export const caseStudies: CaseStudy[] = [
     slug: "uber-direct",
     company: "Uber Direct",
     title: "Recovery of Uncollectible Credit Card Debt",
-    tagline: "Recollected $7M in previously written-off merchant balances through cross-functional process redesign.",
+    tagline: "Recovered $7M in outstanding credit card merchant balances through cross-functional process redesign, new collections workflows, and product enhancements.",
     category: "Real Case",
-    heroMetric: { value: "$7M", label: "Revenue Recovered" },
+    heroMetric: { value: "$7M", label: "Recovered" },
     stats: [
-      { value: "$7M", label: "Recovered" },
-      { value: "100%", label: "Cross-functional" },
-      { value: "CC Merchants", label: "Target Segment" },
+      { value: "$7M", label: "Revenue Recovered" },
+      { value: "90%", label: "Decrease in Arrears" },
+      { value: "2,000+", label: "Accounts Backfilled" },
     ],
-    role: "Client Success & Revenue Operations",
-    duration: "2020 — 2023",
+    role: "Monetization Operations Specialist",
+    team: "Direct Ops US&C",
+    timeframe: "Q1 2023 – Q1 2024",
+    scope: "U.S. & Canada (US&C) Merchants",
+    collaborators: "FinOps, Legal, Engineering, Enablement",
+    duration: "Q1 2023 – Q1 2024",
     overview:
-      "I led a cross-functional initiative within Uber Direct to close a gap in our monetization flow: merchants with outstanding credit card balances had no penalty mechanism, and billing was tracked inconsistently. Unpaid balances in the CC merchant segment had accumulated to over $7M.",
+      "I led a cross-functional initiative within Uber Direct to address a gap in our monetization flow: the lack of penalty actions for merchants with outstanding credit card balances and inefficient tracking and billing of those balances. This case study focuses on the credit card merchant segment, where total unpaid balances had reached over $7M.",
+
+    context: {
+      problemStatement:
+        "Our system allowed credit card merchants to continue operations despite having unpaid invoices. This created a growing pool of uncollectible revenue and exposed the business to financial risk. Key contributors included incorrect account billing setups, outdated contact information, missing or inactive policies, and inconsistent charge workflows.",
+      myRole:
+        "I was responsible for investigating root causes, designing operational workflows, and implementing scalable solutions to recover lost revenue and prevent future risk.",
+      goals: {
+        primary: "Recover outstanding balances from billed credit card merchants",
+        secondary: [
+          "Correct invalid account emails and fix billing policies for unbilled accounts",
+          "Create and implement constraints to limit future debt accrual",
+          "Build scalable handoff processes for long-term monitoring",
+        ],
+      },
+    },
+
+    research: {
+      items: [
+        {
+          label: "Data Audit",
+          detail:
+            "Analyzed AR aging reports and identified $7M+ in unpaid balances across thousands of credit card merchant accounts in US&C. Partner A and their decentralized billing structure accounted for 87% of total debt.",
+        },
+        {
+          label: "Root Cause Analysis",
+          detail:
+            "Discovered key issues including incorrect billing emails, lack of merchant visibility into balances, and invalid payment policies causing invoices to go unbilled entirely.",
+        },
+        {
+          label: "Systems Investigation",
+          detail:
+            "Partnered with FinOps and Engineering to understand how BAM and Commerce systems logged billing failures and notifications when CC pulls failed.",
+        },
+        {
+          label: "Stakeholder Interviews",
+          detail:
+            "Coordinated with Account Managers, FinOps, and Partner A stakeholders to understand merchant confusion, hesitations to pay, and pain points with the invoicing system.",
+        },
+      ],
+      metrics: [
+        "$ amount in signed payment plans",
+        "$ amount recollected",
+        "% increase in successful CC pulls",
+        "# CC entities billed",
+        "Stop growth of arrears",
+      ],
+    },
+
+    challenges: {
+      groups: [
+        {
+          label: "Communication & Data Gaps",
+          items: [
+            "Placeholder or outdated billing emails prevented merchants from receiving invoices or system alerts",
+            "Missing or inaccurate contact info for hundreds of merchant entities",
+            "Merchants unaware of unpaid balances or unable to log into dashboards",
+          ],
+        },
+        {
+          label: "Operational & Process Issues",
+          items: [
+            "No standardized or automated process for recollection",
+            "Fragmented tools and manual workflows led to delays in outreach and tracking",
+            "Inconsistent invoice formats, policies, and account configurations",
+          ],
+        },
+        {
+          label: "Merchant Experience Issues",
+          items: [
+            "Poor UX led to merchant hesitation — no visibility into aggregated balance, difficulty updating payment methods",
+            "Failed lump-sum charges triggered fraud blocks on credit cards",
+            "Limited merchant support resources for resolving billing confusion",
+          ],
+        },
+        {
+          label: "Cross-functional Misalignment",
+          items: [
+            "Misalignment between Operations, FinOps, and Engineering on ownership and workflows",
+            "No unified escalation path for urgent accounts",
+            "Lack of automated constraints to stop further balance accrual",
+          ],
+        },
+      ],
+    },
+
     problem:
-      "Merchants with outstanding credit card balances faced no enforcement action. Tracking was fragmented across teams, and there was no systematic billing process — resulting in millions in revenue left uncollected with no recovery path.",
+      "Credit card merchants could continue operating despite unpaid invoices, with no enforcement mechanism. Billing emails were incorrect, tracking was siloed, and there was no collections process — resulting in $7M+ in unrecoverable arrears and growing exposure.",
+
     approach: [
-      { step: "Audit & Scope", detail: "Mapped all outstanding balances across the CC merchant segment, quantified the gap, and identified the root cause: missing penalty logic and siloed ownership." },
-      { step: "Cross-functional alignment", detail: "Partnered with Finance, Product, and Legal to establish ownership, define penalty thresholds, and create a billing escalation framework." },
-      { step: "Outreach system", detail: "Designed a tiered communication and collection workflow — from automated reminders to manual escalation — with clear SLAs at each stage." },
-      { step: "Tracking & accountability", detail: "Built shared dashboards to track balance recovery in real time, ensuring visibility across teams and preventing future accumulation." },
+      {
+        step: "Phase 1 — Merchant Outreach",
+        detail:
+          "Grouped merchants into cohorts based on marketplace status, outstanding balance, and engagement likelihood. Obtained contact info from Partner A POCs, cross-referencing account data with the Eats platform. Connected with Legal to create external email templates. Worked with CommOps to build and train a temp team for outreach and inbound handling. Created workflow for support agents and a tracker to monitor outreach feedback and results.",
+      },
+      {
+        step: "Phase 2 — Collections Enablement",
+        detail:
+          "Created a live tracker for balances by account — age, amounts billed/unbilled, reason for failed payment. Attempted mass outreach by cohort after correcting billing emails. Updated dashboard interface and changed rules and notification systems for failed CC pulls. Created new workflows to accept multiple payment forms across multiple dates.",
+      },
+      {
+        step: "FinOps & Legal Integration",
+        detail:
+          "Worked with FinOps to create write-off, reserve, and payment plan processes and contracts — previously only available for ACH merchants. Transitioned monitoring of stale balances to OTC with quarterly reviews.",
+      },
+      {
+        step: "Long-term Prevention",
+        detail:
+          "Developed playbooks for proactive CC merchant engagement and account management. Created manual suspension process and built framework for long-term automated suspension and implementation of credit limits for CC accounts. Designed roadmap for product enhancements including a 'Pay Now' feature and automated suspension.",
+      },
     ],
+
     results: [
-      "$7M in previously uncollectible revenue recovered",
-      "Established repeatable penalty and billing process for CC merchant segment",
-      "Reduced future uncollectible risk through systematic tracking",
-      "Aligned cross-functional stakeholders around a single collection workflow",
+      "Recovered $7M in outstanding credit card balances",
+      "90% decrease in arrears through invoice aggregation, reissuance, and transitioning balances to correct journal entries",
+      "Backfilled data and billing policy for 2,000+ accounts, enabling internal tooling to successfully communicate post-pull failures",
+      "Built Early Detection System monitoring account health, credit balance, and usage — notifying team when accounts approach limits",
+      "Created manual suspension process internally triggered by Ops in coordination with AM and Finance",
+      "Built operational handoff flow for GR FinOps and OTC to enable scalable, ongoing collections",
+      "Designed product roadmap for 'Pay Now' feature and automated suspension",
     ],
-    tags: ["Revenue Operations", "Process Design", "Cross-functional", "Merchant Success"],
+
+    tags: ["Revenue Operations", "Collections", "Process Design", "Cross-functional", "FinOps", "Merchant Success"],
   },
   {
     slug: "uber-eats",
@@ -68,9 +195,9 @@ export const caseStudies: CaseStudy[] = [
       "Post-acquisition, Postmates restaurant partners needed to be moved to Uber Eats without disrupting their business operations, revenue, or customer relationships. Any friction risked partner churn and revenue loss at scale.",
     approach: [
       { step: "Segmentation", detail: "Categorized the 1,000+ accounts by complexity, revenue tier, and risk of churn to sequence the migration intelligently." },
-      { step: "Communication playbook", detail: "Developed a partner communication strategy that explained the change clearly, addressed common objections, and set accurate expectations for the transition." },
-      { step: "Hands-on support", detail: "Provided dedicated support to high-value accounts through the onboarding process — menu transfers, settings review, and first-week check-ins." },
-      { step: "Monitoring & follow-up", detail: "Tracked post-migration performance metrics for each account and intervened proactively when early signals of dissatisfaction appeared." },
+      { step: "Communication playbook", detail: "Developed a partner communication strategy that explained the change clearly, addressed common objections, and set accurate expectations." },
+      { step: "Hands-on support", detail: "Provided dedicated support to high-value accounts through onboarding — menu transfers, settings review, and first-week check-ins." },
+      { step: "Monitoring & follow-up", detail: "Tracked post-migration performance metrics and intervened proactively when early signals of dissatisfaction appeared." },
     ],
     results: [
       "1,000+ accounts successfully migrated to Uber Eats",
@@ -89,20 +216,20 @@ export const caseStudies: CaseStudy[] = [
     heroMetric: { value: "25%", label: "Faster Intake" },
     stats: [
       { value: "25%", label: "Time Reduced" },
-      { value: "Intake", label: "Process Redesigned" },
       { value: "Higher", label: "Patient Throughput" },
+      { value: "No new hires", label: "Headcount Neutral" },
     ],
     role: "Operations Consultant",
     duration: "2018 — 2020",
     overview:
-      "Pacific Pain's clinic was experiencing significant delays in patient intake, leading to longer wait times, lower throughput, and declining patient satisfaction. I was brought in to identify the root causes and redesign the intake process end-to-end.",
+      "Pacific Pain's clinic was experiencing significant delays in patient intake, leading to longer wait times, lower throughput, and declining patient satisfaction. I redesigned the intake process end-to-end.",
     problem:
-      "Patient intake was slow and inconsistent — redundant data entry, unclear staff handoffs, and paper-based processes were causing delays at every step. This reduced daily patient capacity and negatively impacted the patient experience.",
+      "Patient intake was slow and inconsistent — redundant data entry, unclear staff handoffs, and paper-based processes caused delays at every step, reducing daily patient capacity.",
     approach: [
       { step: "Process mapping", detail: "Shadowed clinic staff and mapped every step of the intake process to identify bottlenecks, redundancies, and handoff failures." },
       { step: "Root cause analysis", detail: "Identified three key failure points: duplicated data collection, unclear check-in ownership, and manual insurance verification." },
-      { step: "Workflow redesign", detail: "Redesigned the intake sequence to eliminate redundancy, clarify staff roles, and digitize key steps — reducing average intake time per patient." },
-      { step: "Training & rollout", detail: "Trained staff on updated protocols and created reference materials to ensure consistent adoption across shifts." },
+      { step: "Workflow redesign", detail: "Redesigned the intake sequence to eliminate redundancy, clarify staff roles, and digitize key steps." },
+      { step: "Training & rollout", detail: "Trained staff on updated protocols and created reference materials for consistent adoption across shifts." },
     ],
     results: [
       "25% reduction in average patient intake time",
@@ -127,14 +254,14 @@ export const caseStudies: CaseStudy[] = [
     role: "Revenue Operations Consultant",
     duration: "Hypothetical Case",
     overview:
-      "This hypothetical case explores how a healthcare staffing company could improve collections from external partners (facilities and agencies) by implementing a prioritization framework and a structured outreach strategy.",
+      "This hypothetical case explores how a healthcare staffing company could improve collections from external partners by implementing a prioritization framework and a structured outreach strategy.",
     problem:
-      "Collections from external partners were inconsistent and reactive — outreach was ad-hoc, there was no prioritization logic, and communication templates were nonexistent, leaving recoverable revenue on the table.",
+      "Collections from external partners were inconsistent and reactive — outreach was ad-hoc, there was no prioritization logic, and communication templates were nonexistent.",
     approach: [
       { step: "Collections audit", detail: "Segmented outstanding balances by partner type, age, and amount to identify highest-priority recovery opportunities." },
       { step: "Prioritization framework", detail: "Built a tiered scoring system to direct outreach effort toward accounts with the highest recovery likelihood and greatest revenue impact." },
-      { step: "Outreach design", detail: "Drafted email and voicemail templates for each stage of the collection cycle — initial reminder, follow-up, and escalation — balancing professional tone with urgency." },
-      { step: "Workflow integration", detail: "Mapped how the templates and prioritization logic would integrate into existing CRM workflows for repeatable execution." },
+      { step: "Outreach design", detail: "Drafted email and voicemail templates for each stage of the collection cycle — initial reminder, follow-up, and escalation." },
+      { step: "Workflow integration", detail: "Mapped how templates and prioritization logic would integrate into existing CRM workflows for repeatable execution." },
     ],
     results: [
       "Clear prioritization logic to focus effort on highest-value accounts",
@@ -154,19 +281,19 @@ export const caseStudies: CaseStudy[] = [
     stats: [
       { value: "ICP", label: "Defined" },
       { value: "0→1", label: "Pre-Revenue" },
-      { value: "Full GTM", label: "Delivered" },
+      { value: "90-day", label: "Launch Plan" },
     ],
     role: "Strategy Consultant",
     duration: "Hypothetical Case",
     overview:
-      "Ops Sight is a hypothetical pre-revenue startup building workflow automation tools for operations teams. This case study outlines the GTM strategy I developed — covering ideal customer profile, positioning, channel strategy, and launch sequencing.",
+      "Ops Sight is a hypothetical pre-revenue startup building workflow automation tools for operations teams. This case outlines the GTM strategy I developed — covering ICP, positioning, channel strategy, and launch sequencing.",
     problem:
       "As a pre-revenue startup with no existing customers, Ops Sight needed a clear GTM strategy to guide their first 90 days: who to target, how to reach them, and what message would resonate.",
     approach: [
-      { step: "ICP definition", detail: "Identified the ideal customer profile based on pain points, company size, and budget — ops leaders at Series A–C companies with manual, high-volume workflows." },
-      { step: "Positioning & messaging", detail: "Developed a positioning framework differentiating Ops Sight on speed-to-value versus competitors, with messaging tailored to ops vs. executive audiences." },
-      { step: "Channel strategy", detail: "Selected outbound (LinkedIn, email) as the primary acquisition channel for early traction, with content marketing as a secondary channel for inbound over time." },
-      { step: "Launch sequencing", detail: "Built a 90-day launch plan: weeks 1–4 focused on outreach and discovery calls, weeks 5–8 on pilot customers, weeks 9–12 on feedback integration and case study creation." },
+      { step: "ICP definition", detail: "Identified the ideal customer profile — ops leaders at Series A–C companies with manual, high-volume workflows." },
+      { step: "Positioning & messaging", detail: "Developed positioning differentiating Ops Sight on speed-to-value vs. competitors, tailored to ops vs. executive audiences." },
+      { step: "Channel strategy", detail: "Selected outbound (LinkedIn, email) as the primary acquisition channel, with content marketing as a secondary inbound channel." },
+      { step: "Launch sequencing", detail: "Built a 90-day plan: weeks 1–4 outreach and discovery, weeks 5–8 pilot customers, weeks 9–12 feedback and case study creation." },
     ],
     results: [
       "Clear ICP and positioning framework ready for sales and marketing execution",
@@ -191,14 +318,14 @@ export const caseStudies: CaseStudy[] = [
     role: "Designer & Developer",
     duration: "Creative Project",
     overview:
-      "Moon Fruit Match Up was a personal project to explore game design and development in Unity. I handled the full process — game mechanics, visual design, and technical implementation — to ship a playable mobile game.",
+      "Moon Fruit Match Up was a personal project to explore game design and development in Unity. I handled the full process — game mechanics, visual design, and technical implementation.",
     problem:
       "I had no prior Unity experience and wanted to build practical skills in game design and development by completing a real, functional project from scratch.",
     approach: [
-      { step: "Game design", detail: "Defined core game mechanics: a fruit-catching loop with increasing speed and difficulty tiers, scoring system, and simple win/lose states." },
-      { step: "Visual design", detail: "Designed game assets — characters, backgrounds, and UI — with a playful, colorful aesthetic suited to a casual mobile audience." },
+      { step: "Game design", detail: "Defined core mechanics: a fruit-catching loop with increasing speed, difficulty tiers, scoring system, and win/lose states." },
+      { step: "Visual design", detail: "Designed game assets — characters, backgrounds, and UI — with a playful aesthetic suited to a casual mobile audience." },
       { step: "Unity implementation", detail: "Built the game in Unity, implementing physics-based catching mechanics, spawn logic, and score tracking in C#." },
-      { step: "Testing & iteration", detail: "Playtested with friends, iterated on difficulty balance and visual clarity, and polished interactions for a smooth player experience." },
+      { step: "Testing & iteration", detail: "Playtested with friends, iterated on difficulty balance and visual clarity, and polished interactions." },
     ],
     results: [
       "Fully playable fruit-catching game shipped in Unity",
@@ -223,19 +350,19 @@ export const caseStudies: CaseStudy[] = [
     role: "Founder / Creative Lead",
     duration: "Creative Project",
     overview:
-      "Honey Melon Cafe was a passion project to explore what it takes to build a brand and business from scratch. I developed the full concept — name, visual identity, menu design, and launch strategy — for a boutique beverage cafe.",
+      "Honey Melon Cafe was a passion project to explore what it takes to build a brand and business from scratch — name, visual identity, menu design, and launch strategy.",
     problem:
       "Starting with nothing but an idea, I needed to build a compelling, coherent brand and operational foundation that could realistically support a cafe launch.",
     approach: [
-      { step: "Concept & positioning", detail: "Defined the brand positioning: a cozy, health-forward cafe focused on fresh fruit beverages and a welcoming neighborhood vibe." },
-      { step: "Brand identity", detail: "Designed the visual identity — name, color palette, logo direction, and tone of voice — to feel approachable yet distinctive." },
-      { step: "Menu design", detail: "Developed the beverage menu with a focus on seasonal ingredients, visual appeal for social media, and healthy ingredient alternatives." },
-      { step: "Launch planning", detail: "Created an operational launch checklist and soft-launch event plan to build early community awareness and gather feedback." },
+      { step: "Concept & positioning", detail: "Defined brand positioning: a cozy, health-forward cafe focused on fresh fruit beverages and a welcoming neighborhood vibe." },
+      { step: "Brand identity", detail: "Designed visual identity — name, color palette, logo direction, and tone of voice — to feel approachable yet distinctive." },
+      { step: "Menu design", detail: "Developed the beverage menu with seasonal ingredients, visual appeal for social media, and healthy alternatives." },
+      { step: "Launch planning", detail: "Created an operational launch checklist and soft-launch event plan to build early community awareness." },
     ],
     results: [
       "Full brand and concept developed from zero",
       "Menu designed with seasonal focus and social-media-friendly presentation",
-      "Launch strategy created with soft-open event and community outreach plan",
+      "Launch strategy with soft-open event and community outreach plan",
       "Demonstrated brand thinking, operations planning, and creative execution",
     ],
     tags: ["Brand Strategy", "Concept Design", "Launch Planning", "Creative"],
@@ -255,13 +382,13 @@ export const caseStudies: CaseStudy[] = [
     role: "UX Designer",
     duration: "Conceptual Project",
     overview:
-      "Pair & Pour is a conceptual app that helps users find the right beverage pairing for any meal or occasion. I used this project to develop my Figma skills and practice end-to-end UX design — from user flows to high-fidelity wireframes.",
+      "Pair & Pour is a conceptual app that helps users find the right beverage pairing for any meal. I used this project to develop my Figma skills and practice end-to-end UX design.",
     problem:
-      "Choosing the right wine, cocktail, or non-alcoholic pairing for a meal is confusing for most people. There's no simple, opinionated guide that makes this decision easy and fun.",
+      "Choosing the right wine, cocktail, or non-alcoholic pairing for a meal is confusing for most people. There's no simple, opinionated guide that makes this easy and fun.",
     approach: [
       { step: "User research", detail: "Defined target user: home cooks and casual entertainers who want confident pairing suggestions without deep beverage knowledge." },
-      { step: "User flows", detail: "Mapped the core user journey: input a dish → receive curated pairing suggestions → explore and save favorites." },
-      { step: "Wireframing", detail: "Designed low- and mid-fidelity wireframes in Figma for the core screens: home, search, pairing result, and saved favorites." },
+      { step: "User flows", detail: "Mapped the core journey: input a dish → receive curated pairing suggestions → explore and save favorites." },
+      { step: "Wireframing", detail: "Designed low- and mid-fidelity wireframes in Figma for core screens: home, search, pairing result, and saved favorites." },
       { step: "Prototype & feedback", detail: "Built a clickable prototype in Figma and tested it with peers to validate the flow and identify friction points." },
     ],
     results: [
