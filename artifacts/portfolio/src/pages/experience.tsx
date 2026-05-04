@@ -1,102 +1,136 @@
 import { motion } from "framer-motion";
+import { Link } from "wouter";
+import { ArrowUpRight } from "lucide-react";
 
 const experiences = [
   {
     role: "Client Success & Revenue Operations",
-    company: "Uber (Uber Direct & Uber Eats)",
+    company: "Uber",
+    teams: "Uber Direct · Uber Eats",
     period: "2020 — 2023",
-    description: "Spearheaded complex account migrations and revenue recovery initiatives across major Uber divisions.",
-    achievements: [
-      "Led the recollection of $7M in previously uncollectible revenue for Uber Direct through process analysis and targeted interventions.",
-      "Managed the seamless migration of over 1000+ accounts from Postmates to the Uber Eats platform without service disruption.",
-      "Collaborated with cross-functional teams to identify and resolve systemic operational bottlenecks."
-    ]
+    summary: "Led revenue recovery and large-scale account migration across two major Uber divisions — driving measurable impact through cross-functional process design.",
+    highlights: [
+      { metric: "$7M", detail: "Recollected in previously uncollectible credit card merchant balances through a new billing and penalty framework" },
+      { metric: "1,000+", detail: "Postmates accounts migrated to Uber Eats with zero churn following Uber's acquisition" },
+      { metric: "X-functional", detail: "Partnered with Finance, Product, and Legal to close systemic gaps in monetization workflows" },
+    ],
+    caseStudies: [
+      { slug: "uber-direct", label: "Uber Direct Case Study" },
+      { slug: "uber-eats", label: "Uber Eats Case Study" },
+    ],
   },
   {
     role: "Operations Consultant",
-    company: "Healthcare Sector (Pacific Pain)",
+    company: "Healthcare",
+    teams: "Pacific Pain Institute",
     period: "2018 — 2020",
-    description: "Redesigned patient intake and workflow processes to maximize clinic efficiency and patient satisfaction.",
-    achievements: [
-      "Decreased patient intake time by 25% by analyzing workflow data and implementing streamlined operational protocols.",
-      "Drafted and standardized communication templates for external partners and patient interactions.",
-      "Ensured regulatory compliance while increasing daily patient throughput."
-    ]
-  }
+    summary: "Redesigned patient intake and clinical workflows to improve throughput, reduce administrative burden, and standardize communication with external partners.",
+    highlights: [
+      { metric: "25%", detail: "Reduction in average patient intake time through workflow redesign and staff process standardization" },
+      { metric: "Higher", detail: "Daily patient throughput achieved without adding headcount" },
+      { metric: "Standardized", detail: "Communication templates and intake protocols deployed across clinic locations" },
+    ],
+    caseStudies: [
+      { slug: "pacific-pain", label: "Pacific Pain Case Study" },
+    ],
+  },
+];
+
+const totalImpact = [
+  { value: "$23M+", label: "Revenue Impact" },
+  { value: "$7M", label: "Recovered" },
+  { value: "1,000+", label: "Accounts Migrated" },
+  { value: "25%", label: "Faster Patient Intake" },
 ];
 
 export default function Experience() {
   return (
-    <div className="py-20 container mx-auto px-4 max-w-4xl">
-      <motion.div 
-        initial={{ opacity: 0, y: 20 }}
+    <div className="py-16 container mx-auto px-6 max-w-5xl">
+      {/* Header */}
+      <motion.div
+        initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 0.5 }}
+        className="mb-14"
       >
-        <h1 className="text-4xl md:text-5xl font-serif mb-12 text-primary">Work Experience</h1>
+        <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-3">Background</p>
+        <h1 className="text-4xl md:text-5xl font-serif text-foreground mb-4">Work Experience</h1>
+        <p className="text-muted-foreground max-w-xl text-base leading-relaxed">
+          4+ years driving operational improvements in high-growth tech and complex healthcare environments.
+        </p>
+      </motion.div>
 
-        <div className="space-y-12">
-          {experiences.map((exp, idx) => (
-            <motion.div 
-              key={idx}
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="relative pl-8 md:pl-0"
-            >
-              <div className="md:grid md:grid-cols-4 gap-8">
-                <div className="md:col-span-1 mb-4 md:mb-0">
-                  <div className="text-sm font-bold text-muted-foreground uppercase tracking-wider">{exp.period}</div>
-                  <div className="text-lg font-serif mt-1 text-primary">{exp.company}</div>
-                </div>
-                
-                <div className="md:col-span-3 bg-card p-8 rounded-2xl border shadow-sm">
-                  <h3 className="text-2xl font-bold mb-4">{exp.role}</h3>
-                  <p className="text-muted-foreground mb-6">
-                    {exp.description}
-                  </p>
-                  <ul className="space-y-3">
-                    {exp.achievements.map((achievement, i) => (
-                      <li key={i} className="flex items-start">
-                        <span className="text-primary mr-3 mt-1.5">•</span>
-                        <span className="text-sm text-foreground/80 leading-relaxed">{achievement}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-
-          <motion.div 
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="pt-12 border-t text-center"
-          >
-            <h3 className="text-xl font-serif mb-4">Total Impact Highlights</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              <div className="p-6 bg-primary text-primary-foreground rounded-xl text-center">
-                <div className="text-3xl font-bold mb-1">$23M+</div>
-                <div className="text-xs opacity-80 uppercase tracking-wider">Revenue Impact</div>
-              </div>
-              <div className="p-6 bg-primary text-primary-foreground rounded-xl text-center">
-                <div className="text-3xl font-bold mb-1">$7M</div>
-                <div className="text-xs opacity-80 uppercase tracking-wider">Recollection</div>
-              </div>
-              <div className="p-6 bg-primary text-primary-foreground rounded-xl text-center">
-                <div className="text-3xl font-bold mb-1">1000+</div>
-                <div className="text-xs opacity-80 uppercase tracking-wider">Accts Migrated</div>
-              </div>
-              <div className="p-6 bg-primary text-primary-foreground rounded-xl text-center">
-                <div className="text-3xl font-bold mb-1">25%</div>
-                <div className="text-xs opacity-80 uppercase tracking-wider">Time Reduced</div>
-              </div>
+      {/* Impact banner */}
+      <motion.div
+        initial={{ opacity: 0, y: 12 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.1 }}
+        className="bg-[#1B3A2D] text-[#f5f0e8] rounded-xl mb-12"
+      >
+        <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-[#f5f0e8]/10">
+          {totalImpact.map((item) => (
+            <div key={item.label} className="py-6 px-6 text-center">
+              <div className="text-2xl md:text-3xl font-bold font-serif">{item.value}</div>
+              <div className="text-[#f5f0e8]/55 text-xs uppercase tracking-wider mt-1">{item.label}</div>
             </div>
-          </motion.div>
+          ))}
         </div>
       </motion.div>
+
+      {/* Experience entries */}
+      <div className="space-y-10">
+        {experiences.map((exp, idx) => (
+          <motion.div
+            key={idx}
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: idx * 0.1 }}
+            className="grid grid-cols-1 md:grid-cols-4 gap-6"
+          >
+            {/* Left: meta */}
+            <div className="md:col-span-1 space-y-1 pt-1">
+              <div className="text-xs font-bold text-muted-foreground uppercase tracking-wider">{exp.period}</div>
+              <div className="text-base font-serif font-semibold text-primary">{exp.company}</div>
+              <div className="text-xs text-muted-foreground">{exp.teams}</div>
+            </div>
+
+            {/* Right: content */}
+            <div className="md:col-span-3 bg-card border border-border rounded-xl p-6 space-y-5">
+              <div>
+                <h3 className="text-lg font-semibold text-foreground mb-1">{exp.role}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{exp.summary}</p>
+              </div>
+
+              {/* Highlights — metric + description */}
+              <div className="space-y-3">
+                {exp.highlights.map((h, i) => (
+                  <div key={i} className="flex items-start gap-4">
+                    <div className="shrink-0 min-w-[52px] text-right">
+                      <span className="text-sm font-bold text-primary">{h.metric}</span>
+                    </div>
+                    <div className="text-sm text-foreground/75 leading-relaxed border-l border-border pl-4">{h.detail}</div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Case study links */}
+              {exp.caseStudies.length > 0 && (
+                <div className="flex flex-wrap gap-2 pt-2 border-t border-border">
+                  {exp.caseStudies.map((cs) => (
+                    <Link key={cs.slug} href={`/case-studies/${cs.slug}`}>
+                      <span className="inline-flex items-center gap-1.5 text-xs font-medium text-primary hover:underline underline-offset-4 cursor-pointer">
+                        {cs.label}
+                        <ArrowUpRight className="h-3 w-3" />
+                      </span>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+          </motion.div>
+        ))}
+      </div>
     </div>
   );
 }

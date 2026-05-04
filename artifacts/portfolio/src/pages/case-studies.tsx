@@ -1,117 +1,100 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
+import { Link } from "wouter";
+import { caseStudies } from "@/data/case-studies";
 
-const cases = [
-  {
-    title: "Uber Direct",
-    description: "Recollection of $7M in previously uncollectible revenue through systematic process improvement.",
-    category: "Real Cases",
-  },
-  {
-    title: "Uber Eats",
-    description: "Migration of 1000+ accounts from Postmates to Uber Eats, ensuring seamless transition and zero churn.",
-    category: "Real Cases",
-  },
-  {
-    title: "Pacific Pain",
-    description: "Decreased patient intake time by 25% by overhauling operational workflows.",
-    category: "Real Cases",
-  },
-  {
-    title: "Health Staff",
-    description: "Prioritized collections and drafted targeted communication strategies to external partners.",
-    category: "Hypothetical Cases",
-  },
-  {
-    title: "Ops Sight",
-    description: "Developed GTM Strategy for a pre-revenue startup, establishing strong market entry foundation.",
-    category: "Hypothetical Cases",
-  },
-  {
-    title: "Moon Fruit Match Up",
-    description: "Designed and developed a fruit catching game in Unity, blending creativity with technical execution.",
-    category: "Creative Projects",
-  },
-  {
-    title: "Honey Melon Cafe",
-    description: "Concept creation and successful launch of a boutique cafe experience.",
-    category: "Creative Projects",
-  },
-  {
-    title: "Pair & Pour",
-    description: "Wireframing and UX exploration for a beverage pairing app using Figma.",
-    category: "Creative Projects",
-  }
-];
+const categories = ["Real Case", "Hypothetical Case", "Creative Project"] as const;
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: { staggerChildren: 0.1 }
-  }
+const categoryMeta: Record<string, { label: string; description: string }> = {
+  "Real Case": {
+    label: "Real Cases",
+    description: "Live work with measurable business outcomes",
+  },
+  "Hypothetical Case": {
+    label: "Hypothetical Cases",
+    description: "Structured exercises demonstrating strategic thinking",
+  },
+  "Creative Project": {
+    label: "Creative Projects",
+    description: "Personal projects exploring design and product",
+  },
 };
 
-const itemVariants = {
+const cardVariants = {
   hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } }
+  show: { opacity: 1, y: 0, transition: { duration: 0.45, ease: "easeOut" } },
 };
 
 export default function CaseStudies() {
   return (
-    <div className="py-20 container mx-auto px-4 max-w-6xl">
-      <motion.div 
-        initial={{ opacity: 0, y: 20 }}
+    <div className="py-16 container mx-auto px-6 max-w-5xl">
+      {/* Header */}
+      <motion.div
+        initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="mb-16 max-w-2xl"
+        transition={{ duration: 0.5 }}
+        className="mb-14"
       >
-        <h1 className="text-4xl md:text-5xl font-serif mb-6 text-primary">Case Studies</h1>
-        <p className="text-lg text-muted-foreground leading-relaxed">
-          A collection of projects showcasing my approach to problem solving, operational efficiency, and creative execution across various domains.
+        <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-3">Portfolio</p>
+        <h1 className="text-4xl md:text-5xl font-serif text-foreground mb-4">Case Studies</h1>
+        <p className="text-muted-foreground max-w-xl text-base leading-relaxed">
+          A focused collection of work spanning revenue operations, client success, and creative execution. Each card links to a full breakdown.
         </p>
       </motion.div>
 
-      <motion.div 
-        variants={containerVariants}
-        initial="hidden"
-        animate="show"
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-      >
-        {cases.map((project, idx) => (
-          <motion.div 
-            key={idx} 
-            variants={itemVariants}
-            className="group relative flex flex-col justify-between bg-[#1B3A2D] text-[#fdfbf7] p-8 rounded-xl overflow-hidden cursor-pointer transition-all duration-500 hover:-translate-y-2 hover:shadow-xl h-full"
+      {/* Grouped sections */}
+      {categories.map((cat, catIdx) => {
+        const studies = caseStudies.filter((c) => c.category === cat);
+        const meta = categoryMeta[cat];
+        return (
+          <motion.div
+            key={cat}
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: catIdx * 0.1 }}
+            className="mb-14"
           >
-            <div className="absolute top-0 right-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-x-4 -translate-y-4 group-hover:translate-x-0 group-hover:translate-y-0">
-              <ArrowUpRight className="h-6 w-6 text-[#fdfbf7]" />
+            {/* Section label */}
+            <div className="flex items-baseline gap-3 mb-6 pb-3 border-b border-border">
+              <h2 className="text-sm font-bold uppercase tracking-widest text-foreground">{meta.label}</h2>
+              <span className="text-xs text-muted-foreground">{meta.description}</span>
             </div>
 
-            <div>
-              <Badge variant="outline" className="border-[#fdfbf7]/30 text-[#fdfbf7] mb-6 backdrop-blur-sm bg-black/10">
-                {project.category}
-              </Badge>
-              <h3 className="text-2xl font-serif mb-4 leading-snug">{project.title}</h3>
-              <p className="text-[#fdfbf7]/80 text-sm leading-relaxed line-clamp-4">
-                {project.description}
-              </p>
-            </div>
-            
-            <div className="mt-8 pt-6 border-t border-[#fdfbf7]/20 flex items-center text-sm font-medium text-[#fdfbf7]/90 group-hover:text-[#fdfbf7] transition-colors">
-              View details
-              <motion.span 
-                className="ml-2 inline-block"
-                initial={{ x: 0 }}
-                whileHover={{ x: 5 }}
-              >
-                →
-              </motion.span>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {studies.map((study, i) => (
+                <motion.div key={study.slug} variants={cardVariants} initial="hidden" animate="show" transition={{ delay: i * 0.07 }}>
+                  <Link href={`/case-studies/${study.slug}`}>
+                    <div className="group relative flex flex-col justify-between bg-[#1B3A2D] text-[#f5f0e8] p-6 rounded-xl overflow-hidden cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-lg h-full min-h-[210px]">
+                      {/* Hover arrow */}
+                      <ArrowUpRight className="absolute top-4 right-4 h-4 w-4 text-[#f5f0e8]/30 group-hover:text-[#f5f0e8]/80 transition-colors duration-200" />
+
+                      <div className="space-y-3 pr-6">
+                        {/* Company */}
+                        <p className="text-[#f5f0e8]/50 text-xs font-semibold uppercase tracking-widest">{study.company}</p>
+                        {/* Title */}
+                        <h3 className="text-lg font-serif leading-snug">{study.title}</h3>
+                        {/* Tagline — 2 lines max */}
+                        <p className="text-[#f5f0e8]/65 text-xs leading-relaxed line-clamp-2">{study.tagline}</p>
+                      </div>
+
+                      {/* Bottom: key metric */}
+                      <div className="mt-6 pt-4 border-t border-[#f5f0e8]/15 flex items-end justify-between">
+                        <div>
+                          <div className="text-2xl font-bold font-serif">{study.heroMetric.value}</div>
+                          <div className="text-[#f5f0e8]/50 text-xs uppercase tracking-wider">{study.heroMetric.label}</div>
+                        </div>
+                        <span className="text-xs text-[#f5f0e8]/40 group-hover:text-[#f5f0e8]/70 transition-colors font-medium">
+                          View case →
+                        </span>
+                      </div>
+                    </div>
+                  </Link>
+                </motion.div>
+              ))}
             </div>
           </motion.div>
-        ))}
-      </motion.div>
+        );
+      })}
     </div>
   );
 }
