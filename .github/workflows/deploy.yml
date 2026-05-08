@@ -40,9 +40,7 @@ jobs:
         run: pnpm --filter @workspace/portfolio run build
         env:
           NODE_ENV: production
-          # Set VITE_BASE_PATH to /your-repo-name/ if deploying to username.github.io/repo-name
-          # Leave as / if deploying to username.github.io (root site)
-          VITE_BASE_PATH: /
+          VITE_BASE_PATH: /dayna.github.io/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
