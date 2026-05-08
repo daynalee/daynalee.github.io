@@ -4,26 +4,25 @@ import tailwindcss from "@tailwindcss/vite";
 import path from "path";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 
+// Detect whether this is a static build (vite build) vs. a dev server (vite dev / vite)
+const isBuild = process.argv.some((a) => a === "build");
+const isReplit = process.env.REPL_ID !== undefined;
+
+// PORT is only needed for dev/preview server, not for static builds
 const rawPort = process.env.PORT;
-
-if (!rawPort) {
-  throw new Error(
-    "PORT environment variable is required but was not provided.",
-  );
+if (!isBuild && isReplit && !rawPort) {
+  throw new Error("PORT environment variable is required but was not provided.");
 }
-
-const port = Number(rawPort);
-
-if (Number.isNaN(port) || port <= 0) {
+const port = rawPort ? Number(rawPort) : 3000;
+if (rawPort && (Number.isNaN(port) || port <= 0)) {
   throw new Error(`Invalid PORT value: "${rawPort}"`);
 }
 
-const basePath = process.env.BASE_PATH;
-
-if (!basePath) {
-  throw new Error(
-    "BASE_PATH environment variable is required but was not provided.",
-  );
+// BASE_PATH: Replit sets this via workflow env vars; GitHub Actions uses VITE_BASE_PATH
+const basePath =
+  process.env.BASE_PATH ?? process.env.VITE_BASE_PATH ?? "/";
+if (!isBuild && isReplit && !process.env.BASE_PATH) {
+  throw new Error("BASE_PATH environment variable is required but was not provided.");
 }
 
 export default defineConfig({
@@ -32,8 +31,7 @@ export default defineConfig({
     react(),
     tailwindcss(),
     runtimeErrorOverlay(),
-    ...(process.env.NODE_ENV !== "production" &&
-    process.env.REPL_ID !== undefined
+    ...(process.env.NODE_ENV !== "production" && isReplit
       ? [
           await import("@replit/vite-plugin-cartographer").then((m) =>
             m.cartographer({
