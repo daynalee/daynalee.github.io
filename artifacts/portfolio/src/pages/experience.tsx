@@ -4,6 +4,21 @@ import { ArrowUpRight } from "lucide-react";
 
 const experiences = [
   {
+    role: "Client Partner",
+    company: "Unity",
+    teams: "Unity Ads · Publisher Success",
+    period: "2024",
+    summary: "Led end-to-end publisher adoption and monetization strategy for a newly launched Unity Ads feature — Multiple Ad Units waterfall setup — that had no documentation, onboarding process, or internal best practices at launch.",
+    highlights: [
+      { metric: "+5%", detail: "Publisher revenue increase through waterfall and price floor optimization" },
+      { metric: "10%", detail: "Of managed publishers adopted the feature within 9 months" },
+      { metric: "0 → docs", detail: "Built implementation and best-practice documentation from scratch, enabling future scaled rollouts" },
+    ],
+    caseStudies: [
+      { slug: "unity-ads", label: "Unity Ads Case Study" },
+    ],
+  },
+  {
     role: "Monetization Operations",
     company: "Uber Direct",
     teams: "Uber · Uber Direct",

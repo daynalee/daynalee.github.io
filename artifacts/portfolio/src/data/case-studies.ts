@@ -33,6 +33,129 @@ export type CaseStudy = {
 
 export const caseStudies: CaseStudy[] = [
   {
+    slug: "unity-ads",
+    company: "Unity",
+    title: "Driving Publisher Revenue Through Multiple Ad Units Adoption",
+    tagline: "Led end-to-end adoption of a newly launched Unity Ads feature — building the strategy, documentation, and experimentation framework that drove a 5% revenue lift across managed publishers.",
+    category: "Real Case",
+    heroMetric: { value: "+5%", label: "Publisher Revenue" },
+    stats: [
+      { value: "+5%", label: "Revenue Increase" },
+      { value: "10%", label: "Publishers Adopted" },
+      { value: "9 months", label: "Time to Impact" },
+    ],
+    role: "Client Partner",
+    team: "Publisher Success",
+    timeframe: "2024",
+    scope: "Managed Publisher Portfolio",
+    collaborators: "Engineering, Product, Publishers",
+    duration: "2024",
+    overview:
+      "Led publisher adoption and monetization strategy for Unity Ads' Multiple Ad Units waterfall setup — a newly released product feature that lacked GA documentation, implementation resources, and optimization best practices. Partnered cross-functionally with Engineering, Product, and publishers to troubleshoot integrations, configure waterfall setups, and develop scalable operational guidance.",
+
+    context: {
+      problemStatement:
+        "Publishers were interested in using Multiple Ad Units to drive incremental revenue, but no implementation documentation or onboarding process existed. Internal teams lacked established best practices and publishers needed technical and monetization support to adopt the feature successfully.",
+      myRole:
+        "Owned end-to-end strategy and implementation — from partnering with Engineering to troubleshoot SDK and developer issues, to configuring waterfall setups internally, researching industry benchmarks, running A/B tests, monitoring revenue impact, and building reusable documentation for future publisher onboarding.",
+      goals: {
+        primary: "Drive publisher adoption of Multiple Ad Units and increase revenue through optimized waterfall and price floor configurations",
+        secondary: [
+          "Build implementation documentation where none existed",
+          "Develop and validate monetization best practices through experimentation",
+          "Create scalable onboarding resources for future publisher rollouts",
+        ],
+      },
+    },
+
+    research: {
+      items: [
+        {
+          label: "Industry Benchmarking",
+          detail:
+            "Researched how other publishers structured waterfall segmentation and pricing to identify industry-standard configurations and optimization patterns.",
+        },
+        {
+          label: "Publisher Discovery",
+          detail:
+            "Assessed each managed publisher's technical readiness, SDK version, and current monetization setup to identify the best candidates for early adoption.",
+        },
+        {
+          label: "Engineering Partnership",
+          detail:
+            "Worked directly with Engineering to understand the SDK integration requirements, troubleshoot developer blockers, and configure waterfall setups within the Unity Ads dashboard.",
+        },
+      ],
+      metrics: [
+        "% revenue lift per publisher",
+        "% of managed publishers adopted",
+        "Fill rate impact from floor changes",
+        "A/B test performance on price floor variants",
+      ],
+    },
+
+    challenges: {
+      groups: [
+        {
+          label: "No Existing Resources",
+          items: [
+            "No GA documentation, onboarding guide, or implementation checklist existed for the feature at launch",
+            "Internal teams had no established best practices or optimization benchmarks to reference",
+          ],
+        },
+        {
+          label: "Technical Complexity",
+          items: [
+            "Publishers required hands-on SDK troubleshooting and developer support to complete integrations",
+            "Waterfall configuration required internal setup and testing before publishers could go live",
+          ],
+        },
+        {
+          label: "Monetization Risk",
+          items: [
+            "Price floor changes risked negatively impacting fill rates if not validated carefully",
+            "Each publisher's inventory structure required custom segmentation rather than a one-size-fits-all approach",
+          ],
+        },
+      ],
+    },
+
+    problem:
+      "Unity Ads launched Multiple Ad Units with no documentation, no onboarding process, and no internal best practices. Publishers needed technical and monetization guidance to adopt the feature — and without it, a high-potential revenue driver sat unused across the managed publisher base.",
+
+    approach: [
+      {
+        step: "Implementation & Enablement",
+        detail:
+          "Worked directly with publishers and Engineering to enable Multiple Ad Units integrations, troubleshoot SDK issues, and configure waterfall structures within the Unity Ads dashboard for each publisher.",
+      },
+      {
+        step: "Monetization Strategy",
+        detail:
+          "Researched how other publishers structured waterfall segmentation and tested multiple pricing strategies to determine optimal floor configurations for different inventory types.",
+      },
+      {
+        step: "Experimentation",
+        detail:
+          "Ran A/B tests on price floors and inventory segmentation to identify setups that improved monetization without negatively impacting fill rates, using results to refine the playbook.",
+      },
+      {
+        step: "Scaling Adoption",
+        detail:
+          "Partnered with Product to create a best-practices guide that standardized implementation, optimization, and troubleshooting workflows — enabling future publisher rollouts without requiring hands-on support for every integration.",
+      },
+    ],
+
+    results: [
+      "Increased publisher revenue by 5% through waterfall and price floor optimization",
+      "Drove adoption across 10% of managed publishers within 9 months",
+      "Established foundational documentation and operational processes where none previously existed",
+      "Helped position Multiple Ad Units as a scalable incremental revenue strategy both internally and externally",
+    ],
+
+    tags: ["Client Success", "Monetization", "Publisher Operations", "A/B Testing", "Product Adoption", "Documentation"],
+  },
+  {
     slug: "uber-direct",
     company: "Uber Direct",
     title: "Recovery of Uncollectible Credit Card Debt",

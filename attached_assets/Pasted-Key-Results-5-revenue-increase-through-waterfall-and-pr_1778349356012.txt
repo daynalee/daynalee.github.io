@@ -1,0 +1,39 @@
+Key Results
++5% revenue increase through waterfall and price floor optimization
+Enabled adoption across 10% of managed publishers in 9 months
+Created internal best practice documentation for a newly launched Unity Ads feature
+
+Overview
+Led publisher adoption and monetization strategy for Unity Ads’ Multiple Ad Units waterfall setup — a newly released product feature that lacked GA documentation, implementation resources, and optimization best practices.
+Partnered cross-functionally with Engineering, Product, and publishers to troubleshoot integrations, configure waterfall setups, and develop scalable operational guidance.
+
+Problem
+Publishers were interested in using Multiple Ad Units to drive incremental revenue, but:
+No implementation documentation or onboarding process existed
+Internal teams lacked established best practices
+Publishers needed technical and monetization support to adopt the feature successfully
+
+My Role
+Owned end-to-end strategy and implementation, including:
+Partnering with Engineering to troubleshoot SDK and developer issues
+Configuring waterfall setups internally after integration
+Researching industry benchmarks and monetization strategies
+Running A/B tests on price floors and waterfall segmentation
+Monitoring revenue impact and optimization performance
+Building reusable documentation for future publisher onboarding
+
+Approach
+Implementation & Enablement
+Worked directly with publishers and Engineering teams to enable Multiple Ad Units integrations and configure waterfall structures within the Unity Ads dashboard.
+Monetization Strategy
+Researched how other publishers structured waterfall segmentation and tested multiple pricing strategies to determine optimal floor configurations.
+Experimentation
+Ran A/B tests on price floors and inventory segmentation to identify setups that improved monetization without negatively impacting fill rates.
+Scaling Adoption
+Partnered with Product to create a best-practices guide that standardized implementation, optimization, and troubleshooting workflows for future publisher rollouts.
+
+Results
+Increased publisher revenue by 5%
+Drove adoption across 10% of managed publishers
+Established foundational documentation and operational processes for future implementations
+Helped position Multiple Ad Units as a scalable incremental revenue strategy internally and externally

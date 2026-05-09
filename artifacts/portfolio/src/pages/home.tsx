@@ -30,7 +30,7 @@ export default function Home() {
               <span className="text-primary italic">Empathetic Lens</span>
             </h1>
             <p className="text-base md:text-lg text-muted-foreground max-w-lg leading-relaxed">
-              I'm a data-driven problem solver with 4+ years in operations and client success at Uber and in healthcare — driving over <strong className="text-foreground font-semibold">$23M in annual revenue impact</strong>.
+              I'm a data-driven problem solver with 5+ years in operations and client success at Unity, Uber, and in healthcare — driving over <strong className="text-foreground font-semibold">$23M in revenue impact</strong>.
             </p>
 
             <div className="flex flex-wrap gap-3 pt-2">
@@ -119,9 +119,9 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {[
+              { company: "Unity", title: "Driving Publisher Revenue Through Multiple Ad Units Adoption", metric: "+5%", label: "Publisher Revenue", slug: "unity-ads" },
               { company: "Uber Direct", title: "Recovery of Uncollectible Credit Card Debt", metric: "$7M", label: "Recovered", slug: "uber-direct" },
               { company: "Uber Eats", title: "Postmates to Uber Eats Migration", metric: "1,000+", label: "Accounts Migrated", slug: "uber-eats" },
-              { company: "Pacific Pain", title: "Patient Intake Time Reduction", metric: "25%", label: "Faster Intake", slug: "pacific-pain" },
             ].map((item, i) => (
               <motion.div
                 key={item.slug}
