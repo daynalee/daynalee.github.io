@@ -24,161 +24,175 @@
     </div>
   </nav>
 
-  <div class="cs-hero">
+  <header class="cs-hero">
     <div class="container">
-      <a href="case-studies.html" class="all-link" style="color: var(--accent-lt); margin-bottom: 20px; display: inline-flex;">← All Case Studies</a>
-      <div class="section-label">Uber Direct</div>
-      <h1>Recovery of Uncollectible Credit Card Debt</h1>
-      <p>Recovered $7M in outstanding credit card merchant balances through cross-functional process redesign, new collections workflows, and product enhancements.</p>
-
-      <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:24px;">
-        <span class="card-metric" style="background:rgba(255,255,255,0.1); color:rgba(255,255,255,0.85);">Data Analysis &amp; BI</span>
-        <span class="card-metric" style="background:rgba(255,255,255,0.1); color:rgba(255,255,255,0.85);">Rev Protection</span>
-        <span class="card-metric" style="background:rgba(255,255,255,0.1); color:rgba(255,255,255,0.85);">Strategic Execution</span>
-        <span class="card-metric" style="background:rgba(255,255,255,0.1); color:rgba(255,255,255,0.85);">Process Improvement</span>
-        <span class="card-metric" style="background:rgba(255,255,255,0.1); color:rgba(255,255,255,0.85);">Operational Scalability</span>
-        <span class="card-metric" style="background:rgba(255,255,255,0.1); color:rgba(255,255,255,0.85);">Cross Functional Leadership</span>
-        <span class="card-metric" style="background:rgba(255,255,255,0.1); color:rgba(255,255,255,0.85);">Stakeholder Management</span>
+      <a href="case-studies.html" class="cs-back">← All Case Studies</a>
+      <div class="cs-hero-grid">
+        <div>
+          <div class="section-label">Uber Direct</div>
+          <h1>Recovery of Uncollectible Credit Card Debt</h1>
+          <p class="cs-lede">Recovered $7M in outstanding credit card merchant balances through cross-functional process redesign, new collections workflows, and product enhancements.</p>
+          <div class="cs-tags">
+            <span class="cs-tag">Data Analysis &amp; BI</span>
+            <span class="cs-tag">Rev Protection</span>
+            <span class="cs-tag">Strategic Execution</span>
+            <span class="cs-tag">Process Improvement</span>
+            <span class="cs-tag">Operational Scalability</span>
+            <span class="cs-tag">Cross Functional Leadership</span>
+            <span class="cs-tag">Stakeholder Management</span>
+          </div>
+        </div>
+        <div class="cs-hero-side">
+          <div class="cs-metric-card">
+            <div class="big">$7M</div>
+            <div class="sub">Revenue Recovered</div>
+          </div>
+          <div class="cs-meta">
+            <div class="row"><b>Role:</b> Monetization Ops</div>
+            <div class="row"><b>Team:</b> Direct US&amp;C</div>
+            <div class="row"><b>Timeframe:</b> Q2 2023 – Q2 2024</div>
+            <div class="row"><b>Scope:</b> US &amp; Canada Merchants</div>
+            <div class="row"><b>Partners:</b> FinOps, Legal, Eng, Product, Enablement, AMs, CS Ops</div>
+          </div>
+        </div>
       </div>
+    </div>
+  </header>
 
-      <div class="cs-metrics">
-        <div class="cs-metric-item">
-          <div class="cs-metric-val">$7M</div>
-          <div class="cs-metric-label">Revenue Recovered</div>
-        </div>
-        <div class="cs-metric-item">
-          <div class="cs-metric-val">90%</div>
-          <div class="cs-metric-label">Decrease in Arrears</div>
-        </div>
-        <div class="cs-metric-item">
-          <div class="cs-metric-val">2,000+</div>
-          <div class="cs-metric-label">Accounts Backfilled</div>
-        </div>
+  <div class="container">
+    <div class="cs-statbar">
+      <div class="cs-statbar-grid">
+        <div><div class="val">$7M</div><div class="lbl">Revenue Recovered</div></div>
+        <div><div class="val">90%</div><div class="lbl">Decrease in Arrears</div></div>
+        <div><div class="val">2,000+</div><div class="lbl">Accounts Backfilled</div></div>
       </div>
     </div>
   </div>
 
   <div class="container">
-    <div class="stats" style="border-top:none;">
-      <div class="stats-grid" style="grid-template-columns:repeat(5,1fr);">
-        <div class="stat-item" style="text-align:left; padding:0 16px;">
-          <div class="stat-label" style="margin-bottom:6px;">Role</div>
-          <div style="font-weight:500; color:var(--text);">Monetization Ops</div>
+    <div class="cs-body">
+
+      <section class="cs-row">
+        <div class="cs-row-label">Overview</div>
+        <div class="cs-row-content">
+          <p>I led a cross functional initiative within Uber Direct to address a gap in our monetization flow: the lack of penalty actions for merchants with outstanding credit card balances and inefficient tracking and billing of those balances. This case study focuses on the credit card merchant segment, where total unpaid balances had reached over $7M.</p>
         </div>
-        <div class="stat-item" style="text-align:left; padding:0 16px;">
-          <div class="stat-label" style="margin-bottom:6px;">Team</div>
-          <div style="font-weight:500; color:var(--text);">Direct US&amp;C</div>
+      </section>
+
+      <section class="cs-row">
+        <div class="cs-row-label">Context</div>
+        <div class="cs-row-content">
+          <h3>Problem Statement</h3>
+          <p>Our system allowed credit card merchants to continue operations despite having unpaid invoices. This created a growing pool of uncollectible revenue and exposed the business to financial risk. Key contributors included incorrect account billing setups, outdated contact information, missing or inactive policies, and inconsistent charge workflows.</p>
+          <h3>My Role</h3>
+          <p>I was responsible for investigating root causes, understanding current process and gaps, designing operational workflows, and testing and implementing scalable solutions to recover lost revenue and prevent future risk.</p>
+          <h3>Project Goals</h3>
+          <ul>
+            <li><span class="sub-label">Primary:</span> Recover outstanding balances from billed credit card merchants</li>
+            <li><span class="sub-label">Secondary:</span> Correct invalid account emails and fix billing policies for unbilled accounts</li>
+            <li>Create and implement constraints to limit future debt accrual</li>
+            <li>Build scalable handoff processes for long term monitoring and revenue protection</li>
+          </ul>
         </div>
-        <div class="stat-item" style="text-align:left; padding:0 16px;">
-          <div class="stat-label" style="margin-bottom:6px;">Timeframe</div>
-          <div style="font-weight:500; color:var(--text);">Q2 2023 – Q2 2024</div>
+      </section>
+
+      <section class="cs-row">
+        <div class="cs-row-label">Research</div>
+        <div class="cs-row-content">
+          <h3>Data Audit</h3>
+          <p>Analyzed AR aging reports and identified $7M+ in unpaid balances across thousands of credit card merchant accounts in US&amp;C. Partner A and their decentralized billing structure accounted for 87% of total debt.</p>
+          <h3>Root Cause Analysis</h3>
+          <p>Discovered key issues including incorrect billing emails, lack of merchant visibility into balances, and invalid payment policies causing invoices to go unbilled entirely.</p>
+          <h3>Systems Investigation</h3>
+          <p>Partnered with FinOps and Engineering to understand how BAM and Commerce systems logged billing failures and notifications when CC pulls failed.</p>
+          <h3>Stakeholder Feedback</h3>
+          <p>Coordinated with Account Managers, FinOps, and other internal and external stakeholders to understand merchant confusion, hesitations to pay, and pain points with the invoicing system.</p>
+          <h3>Metrics for Success</h3>
+          <ul>
+            <li>$ amount in signed payment plans</li>
+            <li>$ amount recollected</li>
+            <li>% increase in successful CC pulls</li>
+            <li># CC entities billed</li>
+            <li>% reduction in growth of arrears</li>
+          </ul>
         </div>
-        <div class="stat-item" style="text-align:left; padding:0 16px;">
-          <div class="stat-label" style="margin-bottom:6px;">Scope</div>
-          <div style="font-weight:500; color:var(--text);">US &amp; Canada Merchants</div>
+      </section>
+
+      <section class="cs-row">
+        <div class="cs-row-label">Challenges</div>
+        <div class="cs-row-content">
+          <h3>Communication &amp; Data Gaps</h3>
+          <ul>
+            <li>Placeholder or outdated billing emails prevented merchants from receiving invoices or system alerts</li>
+            <li>Missing or inaccurate contact info for hundreds of merchant entities</li>
+            <li>Merchants unaware of unpaid balances or unable to log into dashboards</li>
+          </ul>
+          <h3>Operational &amp; Process Issues</h3>
+          <ul>
+            <li>No standardized or automated process for recollection</li>
+            <li>Fragmented tools and manual workflows led to delays in outreach and tracking</li>
+            <li>Inconsistent invoice formats, policies, and account configurations</li>
+          </ul>
+          <h3>Merchant Experience Issues</h3>
+          <ul>
+            <li>Poor UX led to merchant hesitation — no visibility into aggregated balance, difficulty updating payment methods</li>
+            <li>Failed lump-sum charges triggered fraud blocks on credit cards</li>
+            <li>Limited merchant support resources for resolving billing confusion</li>
+          </ul>
+          <h3>Cross Functional Misalignment</h3>
+          <ul>
+            <li>Misalignment between Operations, FinOps, and Engineering on ownership and workflows</li>
+            <li>No unified escalation path for urgent accounts</li>
+            <li>Lack of automated constraints to stop further balance accrual</li>
+          </ul>
         </div>
-        <div class="stat-item" style="text-align:left; padding:0 16px; border-right:none;">
-          <div class="stat-label" style="margin-bottom:6px;">Partners</div>
-          <div style="font-weight:500; color:var(--text);">FinOps, Legal, Eng, Product, Enablement, AMs, CS Ops</div>
+      </section>
+
+      <section class="cs-row">
+        <div class="cs-row-label">Approach</div>
+        <div class="cs-row-content">
+          <h3>Phase 1 — Merchant Outreach</h3>
+          <ul>
+            <li>Grouped merchants into cohorts based on marketplace status, outstanding balance, and engagement likelihood</li>
+            <li>Obtained contact info from Partner A POCs, cross referencing account data with the Eats platform</li>
+            <li>Connected with Legal to create external email templates</li>
+            <li>Worked with CommOps to build and train a temp team for outreach and inbound handling</li>
+            <li>Created workflow for support agents and a tracker to monitor outreach feedback and results</li>
+          </ul>
+          <h3>Phase 2 — Collections Enablement</h3>
+          <ul>
+            <li>Created a live tracker for balances by account containing age, amounts billed/unbilled, reason for failed payment and other critical data points</li>
+            <li>Attempted mass outreach by cohort after correcting billing emails. Updated dashboard interface and changed rules and notification systems for failed CC pulls</li>
+            <li>Created new workflows to accept multiple payment forms across multiple dates</li>
+          </ul>
+          <h3>FinOps &amp; Legal Integration</h3>
+          <ul>
+            <li>Worked with FinOps to create write-off, reserve, and payment plan processes and contracts which were previously only available for ACH merchants</li>
+            <li>Transitioned monitoring of stale balances to OTC with quarterly reviews</li>
+          </ul>
+          <h3>Long Term Prevention</h3>
+          <ul>
+            <li>Developed playbooks for proactive CC merchant engagement and account management</li>
+            <li>Created manual suspension process and built framework for long term automated suspension and implementation of credit limits for CC accounts</li>
+            <li>Designed roadmap for product enhancements including a "Pay Now" feature and automated suspension</li>
+          </ul>
         </div>
-      </div>
-    </div>
-  </div>
+      </section>
 
-  <div class="container">
-    <div class="cs-content">
-
-      <h2>Overview</h2>
-      <p>I led a cross functional initiative within Uber Direct to address a gap in our monetization flow: the lack of penalty actions for merchants with outstanding credit card balances and inefficient tracking and billing of those balances. This case study focuses on the credit card merchant segment, where total unpaid balances had reached over $7M.</p>
-
-      <h2>Context</h2>
-      <p><strong>Problem Statement.</strong> Our system allowed credit card merchants to continue operations despite having unpaid invoices. This created a growing pool of uncollectible revenue and exposed the business to financial risk. Key contributors included incorrect account billing setups, outdated contact information, missing or inactive policies, and inconsistent charge workflows.</p>
-      <p><strong>My Role.</strong> I was responsible for investigating root causes, understanding current process and gaps, designing operational workflows, and testing and implementing scalable solutions to recover lost revenue and prevent future risk.</p>
-      <p><strong>Project Goals.</strong></p>
-      <ul>
-        <li><strong>Primary:</strong> Recover outstanding balances from billed credit card merchants</li>
-        <li><strong>Secondary:</strong> Correct invalid account emails and fix billing policies for unbilled accounts</li>
-        <li>Create and implement constraints to limit future debt accrual</li>
-        <li>Build scalable handoff processes for long term monitoring and revenue protection</li>
-      </ul>
-
-      <h2>Research</h2>
-      <p><strong>Data Audit.</strong> Analyzed AR aging reports and identified $7M+ in unpaid balances across thousands of credit card merchant accounts in US&amp;C. Partner A and their decentralized billing structure accounted for 87% of total debt.</p>
-      <p><strong>Root Cause Analysis.</strong> Discovered key issues including incorrect billing emails, lack of merchant visibility into balances, and invalid payment policies causing invoices to go unbilled entirely.</p>
-      <p><strong>Systems Investigation.</strong> Partnered with FinOps and Engineering to understand how BAM and Commerce systems logged billing failures and notifications when CC pulls failed.</p>
-      <p><strong>Stakeholder Feedback.</strong> Coordinated with Account Managers, FinOps, and other internal and external stakeholders to understand merchant confusion, hesitations to pay, and pain points with the invoicing system.</p>
-      <p><strong>Metrics for Success.</strong></p>
-      <ul>
-        <li>$ amount in signed payment plans</li>
-        <li>$ amount recollected</li>
-        <li>% increase in successful CC pulls</li>
-        <li># CC entities billed</li>
-        <li>% reduction in growth of arrears</li>
-      </ul>
-
-      <h2>Challenges</h2>
-      <p><strong>Communication &amp; Data Gaps.</strong></p>
-      <ul>
-        <li>Placeholder or outdated billing emails prevented merchants from receiving invoices or system alerts</li>
-        <li>Missing or inaccurate contact info for hundreds of merchant entities</li>
-        <li>Merchants unaware of unpaid balances or unable to log into dashboards</li>
-      </ul>
-      <p><strong>Operational &amp; Process Issues.</strong></p>
-      <ul>
-        <li>No standardized or automated process for recollection</li>
-        <li>Fragmented tools and manual workflows led to delays in outreach and tracking</li>
-        <li>Inconsistent invoice formats, policies, and account configurations</li>
-      </ul>
-      <p><strong>Merchant Experience Issues.</strong></p>
-      <ul>
-        <li>Poor UX led to merchant hesitation — no visibility into aggregated balance, difficulty updating payment methods</li>
-        <li>Failed lump-sum charges triggered fraud blocks on credit cards</li>
-        <li>Limited merchant support resources for resolving billing confusion</li>
-      </ul>
-      <p><strong>Cross Functional Misalignment.</strong></p>
-      <ul>
-        <li>Misalignment between Operations, FinOps, and Engineering on ownership and workflows</li>
-        <li>No unified escalation path for urgent accounts</li>
-        <li>Lack of automated constraints to stop further balance accrual</li>
-      </ul>
-
-      <h2>Approach</h2>
-      <p><strong>Phase 1 — Merchant Outreach.</strong></p>
-      <ul>
-        <li>Grouped merchants into cohorts based on marketplace status, outstanding balance, and engagement likelihood</li>
-        <li>Obtained contact info from Partner A POCs, cross referencing account data with the Eats platform</li>
-        <li>Connected with Legal to create external email templates</li>
-        <li>Worked with CommOps to build and train a temp team for outreach and inbound handling</li>
-        <li>Created workflow for support agents and a tracker to monitor outreach feedback and results</li>
-      </ul>
-      <p><strong>Phase 2 — Collections Enablement.</strong></p>
-      <ul>
-        <li>Created a live tracker for balances by account containing age, amounts billed/unbilled, reason for failed payment and other critical data points</li>
-        <li>Attempted mass outreach by cohort after correcting billing emails. Updated dashboard interface and changed rules and notification systems for failed CC pulls</li>
-        <li>Created new workflows to accept multiple payment forms across multiple dates</li>
-      </ul>
-      <p><strong>FinOps &amp; Legal Integration.</strong></p>
-      <ul>
-        <li>Worked with FinOps to create write-off, reserve, and payment plan processes and contracts which were previously only available for ACH merchants</li>
-        <li>Transitioned monitoring of stale balances to OTC with quarterly reviews</li>
-      </ul>
-      <p><strong>Long Term Prevention.</strong></p>
-      <ul>
-        <li>Developed playbooks for proactive CC merchant engagement and account management</li>
-        <li>Created manual suspension process and built framework for long term automated suspension and implementation of credit limits for CC accounts</li>
-        <li>Designed roadmap for product enhancements including a "Pay Now" feature and automated suspension</li>
-      </ul>
-
-      <h2>Results</h2>
-      <ul>
-        <li>Recovered $7M in outstanding credit card balances</li>
-        <li>90% decrease in arrears through invoice aggregation, reissuance, and transitioning balances to correct journal entries</li>
-        <li>Backfilled data and billing policy for 2,000+ accounts, enabling internal tooling to successfully communicate post-pull failures</li>
-        <li>Built an Early Detection System monitoring account health, credit balance, and usage to notify the team when accounts approach limits</li>
-        <li>Created manual suspension process internally triggered by Ops in coordination with AM and Finance</li>
-        <li>Built operational handoff flow for GR FinOps and OTC to enable scalable, ongoing collections</li>
-        <li>Designed product roadmap for "Pay Now" feature and automated suspension</li>
-      </ul>
+      <section class="cs-row">
+        <div class="cs-row-label">Results</div>
+        <div class="cs-row-content">
+          <ul>
+            <li>Recovered $7M in outstanding credit card balances</li>
+            <li>90% decrease in arrears through invoice aggregation, reissuance, and transitioning balances to correct journal entries</li>
+            <li>Backfilled data and billing policy for 2,000+ accounts, enabling internal tooling to successfully communicate post-pull failures</li>
+            <li>Built an Early Detection System monitoring account health, credit balance, and usage to notify the team when accounts approach limits</li>
+            <li>Created manual suspension process internally triggered by Ops in coordination with AM and Finance</li>
+            <li>Built operational handoff flow for GR FinOps and OTC to enable scalable, ongoing collections</li>
+            <li>Designed product roadmap for "Pay Now" feature and automated suspension</li>
+          </ul>
+        </div>
+      </section>
 
       <div class="cs-nav">
         <a href="case-study-unity.html" class="btn btn-outline">← Unity</a>
@@ -196,15 +210,13 @@
         </div>
         <div class="footer-links">
           <a href="https://www.linkedin.com/in/dayna-l66/" target="_blank" rel="noopener" class="footer-link">LinkedIn</a>
-          <a href="https://mielgua.substack.com/" target="_blank" rel="noopener" class="footer-link">Substack</a>
+          <a href="https://mielgua.substack.com/" target="_blank" rel="noopener" class="footer-link">Blog</a>
           <a href="https://docs.google.com/document/d/1WA4QMaoIAt--Spv99K-7ng09ziiGYS3rVJMs1648hq0/edit" target="_blank" rel="noopener" class="footer-link">Download CV</a>
           <a href="mailto:mielgua@gmail.com?subject=Job%20Opportunity" class="footer-link">mielgua@gmail.com</a>
         </div>
       </div>
-      <div class="footer-bottom">
-        <div class="footer-greeting">hi :) im happy you're here!</div>
-        <div class="footer-copy">© 2025 Dayna Lee</div>
-      </div>
+      <div class="footer-greeting">hi :) im happy you're here!</div>
+      <div class="footer-copy">© 2025 Dayna Lee</div>
     </div>
   </footer>
 
