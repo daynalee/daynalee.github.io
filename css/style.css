@@ -511,11 +511,15 @@ footer {
 .cases-full-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 26px;
-  margin-bottom: 64px;
+  gap: 22px;
+  margin-bottom: 56px;
 }
-.case-card-large { min-height: 250px; }
-.case-card-large .card-title { font-size: 1.45rem; }
+/* compact cards for the index page (feet align at the bottom of each row) */
+.cases-full-grid .case-card { padding: 24px 26px 26px; min-height: 0; }
+.cases-full-grid .card-company-tag { margin-bottom: 12px; }
+.cases-full-grid .card-title { font-size: 1.15rem; line-height: 1.32; margin-bottom: 16px; }
+.cases-full-grid .card-metric-big { font-size: 1.5rem; }
+.cases-full-grid .card-metric-sub { font-size: 0.8rem; margin-top: 4px; }
 
 /* ── Case Study Detail ────────────────────────────────────────── */
 .cs-back {
