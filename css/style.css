@@ -463,6 +463,10 @@ footer {
 .about-body p strong { color: var(--text); font-weight: 600; }
 
 .about-sidebar { display: flex; flex-direction: column; gap: 28px; }
+
+/* full-width info tiles below the bio + photo (masonry packs them, no empty gaps) */
+.about-tiles { columns: 3; column-gap: 24px; margin: 12px 0 8px; }
+.about-tiles .sidebar-block { break-inside: avoid; margin: 0 0 24px; }
 .sidebar-block { background: var(--bg-card); border-radius: var(--radius); padding: 28px 32px; box-shadow: var(--shadow); }
 .sidebar-block h3 { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--green); margin-bottom: 16px; }
 
@@ -703,6 +707,7 @@ footer {
   .cases-full-grid { grid-template-columns: 1fr; }
   .about-snippet { grid-template-columns: 1fr; gap: 40px; }
   .about-grid { grid-template-columns: 1fr; gap: 40px; }
+  .about-tiles { columns: 2; }
   .exp-card { grid-template-columns: 1fr; gap: 16px; }
   .exp-meta { padding-bottom: 4px; }
   .cs-hero-grid { grid-template-columns: 1fr; gap: 36px; }
@@ -721,5 +726,6 @@ footer {
   section { padding: 56px 0; }
   .cs-statbar-grid { grid-template-columns: 1fr; gap: 32px; }
   .gallery { columns: 2; }
+  .about-tiles { columns: 1; }
   .footer-bottom { text-align: center; }
 }
