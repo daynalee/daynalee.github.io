@@ -1,48 +1,49 @@
-# Dayna Lee — Portfolio
+# Dayna Lee, portfolio and case studies
 
-A static, hand-built version of my portfolio (originally on Wix), ready to host for free on GitHub Pages.
+### Analytic Mind, Empathetic Lens
 
-> *Analytic Mind, Empathetic Lens*
+[![Live site](https://img.shields.io/badge/live_site-daynalee.github.io-1a1a1a?style=flat-square)](https://daynalee.github.io/)
+![HTML](https://img.shields.io/badge/HTML-black?style=flat-square&logo=html5)
+![CSS](https://img.shields.io/badge/CSS-black?style=flat-square&logo=css3)
+![No build step](https://img.shields.io/badge/no_build_step-static-black?style=flat-square)
 
-## Pages
-| File | Page |
-|------|------|
-| `index.html` | Home |
-| `case-studies.html` | Case Studies index |
-| `case-study-unity.html` | Unity — Multiple Ad Units adoption |
-| `case-study-uber-direct.html` | Uber Direct — Credit card debt recovery |
-| `case-study-uber-eats.html` | Uber Eats — Postmates migration |
-| `case-study-pps.html` | Pacific Pain — Patient intake reduction |
-| `about.html` | About |
-| `experience.html` | Experience |
-| `css/style.css` | All styling |
+My professional portfolio: five years growing enterprise accounts across Uber, Unity, and
+healthcare, with four case studies written up in full.
 
-No build step, no dependencies — just HTML and CSS. Fonts load from Google Fonts.
+**Live: https://daynalee.github.io/**
 
-## Preview locally
-Open `index.html` directly in a browser, or run a local server from this folder:
+[![Portfolio homepage](docs/home.png)](https://daynalee.github.io/)
+
+## Case studies
+
+| Case study | What it covers |
+|---|---|
+| [Unity](https://daynalee.github.io/case-study-unity.html) | Driving Multiple Ad Units adoption across a publisher book |
+| [Uber Direct](https://daynalee.github.io/case-study-uber-direct.html) | Credit card debt recovery |
+| [Uber Eats](https://daynalee.github.io/case-study-uber-eats.html) | Migrating merchants through the Postmates transition |
+| [Pacific Pain](https://daynalee.github.io/case-study-pps.html) | Cutting patient intake time for a healthcare practice |
+
+Also here: [About](https://daynalee.github.io/about.html) and
+[Experience](https://daynalee.github.io/experience.html).
+
+## Related projects
+
+Two working prototypes of tooling for the roles I work in:
+
+- [**Deal Desk**](https://github.com/daynalee/partnerships), pipeline, deal rooms, and a live
+  deal economics modeler for strategic partnerships.
+  [Demo](https://daynalee.github.io/partnerships/)
+- [**Client Partner Copilot**](https://github.com/daynalee/client-partner), automated account
+  analysis and meeting prep for ad sales.
+  [Demo](https://daynalee.github.io/client-partner/)
+
+## How it is built
+
+Hand-built HTML and CSS. No framework, no build step, no dependencies. Fonts load from Google
+Fonts. Colors, type, and spacing are controlled by the CSS variables at the top of
+`css/style.css`. Deployed on GitHub Pages from `main`.
 
 ```bash
 python3 -m http.server 8000
 # then visit http://localhost:8000
 ```
-
-## Deploy to GitHub Pages
-
-1. Create a new repository on GitHub (e.g. `portfolio` or `dayna-lee.github.io`).
-2. From this folder, push the files:
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial portfolio site"
-   git branch -M main
-   git remote add origin https://github.com/<your-username>/<repo>.git
-   git push -u origin main
-   ```
-3. On GitHub: **Settings → Pages → Build and deployment**, set **Source** to `Deploy from a branch`, branch `main`, folder `/ (root)`, then **Save**.
-4. Your site goes live at `https://<your-username>.github.io/<repo>/` within a minute or two.
-
-> Tip: if you name the repo `<your-username>.github.io`, the site is served at the root URL with no subpath.
-
-## Editing content
-All text lives directly in the `.html` files. Colors, fonts, and spacing are controlled by the CSS variables at the top of `css/style.css` (`:root { ... }`).
