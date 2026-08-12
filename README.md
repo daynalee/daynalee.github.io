@@ -33,7 +33,7 @@ Two working prototypes of tooling for the roles I work in:
 - [**Deal Desk**](https://github.com/daynalee/partnerships), pipeline, deal rooms, and a live
   deal economics modeler for strategic partnerships.
   [Demo](https://daynalee.github.io/partnerships/)
-- [**Client Partner Copilot**](https://github.com/daynalee/client-partner), automated account
+- [**Dayna's Dashboard**](https://github.com/daynalee/client-partner), automated account
   analysis and meeting prep for ad sales.
   [Demo](https://daynalee.github.io/client-partner/)
 
