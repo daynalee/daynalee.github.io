@@ -392,18 +392,20 @@ footer {
 .footer-brand { font-family: var(--serif); font-size: 1.7rem; font-weight: 700; margin-bottom: 6px; }
 .footer-tagline { font-size: 0.95rem; color: var(--text-muted); font-style: italic; font-family: var(--serif); }
 
-.footer-links { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+.footer-links { display: flex; gap: 26px; flex-wrap: wrap; align-items: center; }
 
 .footer-link {
-  padding: 10px 22px;
-  border: 1.5px solid #d3ccbc;
-  border-radius: 100px;
+  padding: 4px 0;
+  border: none;
+  border-bottom: 1px solid transparent;
+  border-radius: 0;
   font-size: 0.85rem;
+  color: var(--text-muted);
   font-weight: 500;
   color: var(--text);
   transition: all 0.2s;
 }
-.footer-link:hover { background: var(--green); border-color: var(--green); color: #fff; }
+.footer-link:hover { background: none; color: var(--green); border-bottom-color: var(--green); }
 
 .footer-greeting {
   font-family: var(--serif);
