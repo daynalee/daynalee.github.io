@@ -13,9 +13,9 @@
   --green-deep: #20301F;   /* hero / footer */
   --green-soft: #6E7F6C;   /* muted labels on dark green */
   --terracotta: #C36A43;   /* small accent triangle, used on cream */
-  --lime:       #B5CE3A;   /* bright accent — ONLY on dark green surfaces.
-                              On cream it fails contrast (1.5:1); on --green-deep it is 7.9:1.
-                              Swap to #C6E63F for a louder neon version. */
+  --lime:       #C6E63F;   /* bright accent — ONLY on dark green surfaces.
+                              On cream it fails contrast (1.2:1); on --green-deep it is 9.8:1.
+                              Swap to #B5CE3A for a warmer, calmer version. */
   --border:     #E1DBCE;
   --shadow:     0 4px 24px rgba(40,50,35,0.08);
   --shadow-hover: 0 14px 40px rgba(40,50,35,0.16);
@@ -674,7 +674,7 @@ footer {
 .cta-band p { color: rgba(255,255,255,0.72); max-width: 560px; margin: 0 auto 30px; font-size: 1.05rem; }
 .cta-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
 .cta-band .btn-primary { background: var(--lime); color: #16220F; border-color: var(--lime); }
-.cta-band .btn-primary:hover { background: #C6E63F; border-color: #C6E63F; color: #16220F; }
+.cta-band .btn-primary:hover { background: #D6F25C; border-color: #D6F25C; color: #16220F; }
 .cta-band .btn-primary:hover { background: rgba(255,255,255,0.86); border-color: rgba(255,255,255,0.86); }
 .cta-band .btn-outline { color: #fff; border-color: rgba(255,255,255,0.45); }
 .cta-band .btn-outline:hover { background: rgba(255,255,255,0.12); border-color: #fff; color: #fff; }
