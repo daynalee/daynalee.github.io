@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Turning Around an Underperforming UA Campaign | Dayna Lee</title>
+  <meta name="description" content="A five step diagnostic playbook for underperforming user acquisition campaigns: verify measurement, read the funnel, separate creative from audience from auction, check incrementality, then change one thing." />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="alternate icon" href="favicon-32.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Dayna Lee" />
+  <meta property="og:title" content="Turning Around an Underperforming UA Campaign | Dayna Lee" />
+  <meta property="og:description" content="A five step diagnostic playbook for underperforming user acquisition campaigns: verify measurement, read the funnel, separate creative from audience from auction, check incrementality, then change one thing." />
+  <meta property="og:url" content="https://daynalee.github.io/case-study-demand-playbook.html" />
+  <meta property="og:image" content="https://daynalee.github.io/images/og-preview.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Dayna Lee. Analytic Mind, Empathetic Lens." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Dayna Lee</a>
+      <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="case-studies.html" class="active">Case Studies</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="experience.html">Experience</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="cs-hero">
+    <div class="container">
+      <a href="case-studies.html" class="cs-back">← All Case Studies</a>
+      <div class="cs-hero-grid">
+        <div>
+          <div class="section-label">Advertiser Growth</div>
+          <h1>Turning Around an Underperforming UA Campaign</h1>
+          <p class="cs-lede">A five step diagnostic I run before changing a single setting. Most underperforming campaigns are misdiagnosed, so this playbook finds the real problem first: measurement, funnel, creative, audience, or auction.</p>
+          <div class="cs-tags">
+            <span class="cs-tag">User Acquisition</span>
+            <span class="cs-tag">Demand Side</span>
+            <span class="cs-tag">Campaign Diagnostics</span>
+            <span class="cs-tag">Playbook</span>
+          </div>
+        </div>
+        <div class="cs-hero-side">
+          <div class="cs-metric-card">
+            <div class="big">5-step</div>
+            <div class="sub">Diagnostic Framework</div>
+          </div>
+          <div class="cs-meta">
+            <div class="row"><b>Role:</b> Client Partner</div>
+            <div class="row"><b>Team:</b> Advertiser Growth</div>
+            <div class="row"><b>Format:</b> Playbook</div>
+            <div class="row"><b>Partners:</b> Advertisers, Programmatic Team, Creative</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- BODY -->
+  <div class="container">
+    <div class="cs-body">
+
+      <div class="cs-skim">
+        <div><div class="k">Situation</div><div class="v">An advertiser's UA campaign is missing its CPI or ROAS target and nobody can agree on why.</div></div>
+        <div><div class="k">Action</div><div class="v">Run the five step diagnostic before touching bids, budgets, or creative.</div></div>
+        <div><div class="k">Result</div><div class="v">One targeted fix instead of five guesses, and a written record of what worked for the next QBR.</div></div>
+      </div>
+
+      <section class="cs-row">
+        <div class="cs-row-label">Overview</div>
+        <div class="cs-row-content">
+          <p>When a campaign underperforms, the instinct is to act: raise bids, swap creative, widen targeting. The problem is that underperformance is usually misdiagnosed. Sometimes the numbers themselves are wrong, an attribution lag or a broken postback that looks like a performance drop. Other times the fix sits in a different part of the funnel than where the symptom shows up.</p>
+          <p>This playbook is the order I check things in, refined across the advertiser accounts I manage. It is a methodology, not a single client story, so there are no cherry picked results here. Just the process I run every time.</p>
+        </div>
+      </section>
+
+      <section class="cs-row">
+        <div class="cs-row-label">Context</div>
+        <div class="cs-row-content">
+          <h3>Problem Statement</h3>
+          <p>When a campaign misses target, everyone has a theory. The advertiser blames the inventory, the platform team blames the creative, the creative team blames the targeting. Without a shared diagnostic order, teams change three things at once and learn nothing.</p>
+          <h3>My Role</h3>
+          <p>As the client partner I own the diagnosis. I pull the funnel data, run the checks below, and bring the advertiser one clear read: what is actually wrong, and what we are changing first.</p>
+          <h3>When To Use This</h3>
+          <ul>
+            <li>CPI drifting above target for five or more days</li>
+            <li>Sudden performance drops with no obvious cause</li>
+            <li>New campaigns that never hit target after launch</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="cs-row">
+        <div class="cs-row-label">The Five Steps</div>
+        <div class="cs-row-content">
+          <h3>1. Verify measurement first</h3>
+          <p>Before anything else: check attribution windows and SKAN postback delays, compare platform reporting against the MMP, and confirm tracking survived any recent SDK or app update. A meaningful share of "performance drops" I have seen were measurement artifacts, not real drops. Fixing a tracking issue takes an hour; rebuilding a campaign around bad data takes weeks.</p>
+          <h3>2. Read the funnel top down</h3>
+          <p>Delivery, CTR, install rate, post install quality. Where the drop sits tells you the lever. Delivery problems point to budget, bid, or audience. CTR problems point to creative or placement. Post install problems point to targeting or the landing experience. The symptom and the cause are rarely in the same place.</p>
+          <h3>3. Separate creative, audience, and auction</h3>
+          <p>These three get confused constantly, and each has a different fix:</p>
+          <ul>
+            <li><span class="sub-label">Creative fatigue:</span> frequency climbing while CTR falls on the same audience. Fix is creative, not budget.</li>
+            <li><span class="sub-label">Audience saturation:</span> CPM rising, reach flattening, new user share dropping. Fix is audience expansion or refresh.</li>
+            <li><span class="sub-label">Auction pressure:</span> clearing prices up with no change in your setup. Fix is bid strategy or timing, ideally with programmatic input.</li>
+          </ul>
+          <h3>4. Check incrementality</h3>
+          <p>Are we buying users the advertiser would have acquired anyway? Look for overlap between campaigns, branded search lift during campaign flights, and shifts in the organic baseline. Spend that cannibalizes organic installs looks like performance until you net it out.</p>
+          <h3>5. Change one thing, with a kill criteria</h3>
+          <p>Write down the hypothesis, the single change, what success looks like, and the date we revert if it does not work. No stacked changes. The log becomes the QBR story: here is what we tried, what we learned, and what we did next.</p>
+        </div>
+      </section>
+
+      <section class="cs-row">
+        <div class="cs-row-label">Challenges</div>
+        <div class="cs-row-content">
+          <ul>
+            <li><span class="sub-label">Pressure to act fast:</span> advertisers want the fix today, and the diagnostic takes a day or two. I frame it plainly: one day of diagnosis saves two weeks of guessing.</li>
+            <li><span class="sub-label">Stacked variables:</span> the hardest part is resisting the urge to change bid, budget, and creative together. One change at a time is slower to start and faster to finish.</li>
+            <li><span class="sub-label">Honest limits:</span> this playbook finds the lever. It does not replace creative testing volume or deep auction level analysis. For the latter I partner with our programmatic team rather than doing hands on trading myself.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="cs-row">
+        <div class="cs-row-label">Results</div>
+        <div class="cs-row-content">
+          <p>The win here is process, not a single heroic number. What the advertiser gets from a run of this playbook:</p>
+          <ul>
+            <li>A clear diagnosis within days, in language the whole team shares</li>
+            <li>One targeted change instead of scattershot edits</li>
+            <li>A written record that makes the next QBR easy to tell</li>
+            <li>A repeatable process the team can run without me in the room</li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="cs-nav">
+        <a href="case-studies.html" class="btn btn-outline">← All Case Studies</a>
+        <a href="case-study-unity.html" class="btn btn-primary">Next: Unity Case Study →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA BAND -->
+  <div class="container">
+    <div class="cta-band">
+      <h2>Let's connect</h2>
+      <p>Looking for Client Partner roles in NYC or remote (EST).</p>
+      <div class="cta-actions">
+        <a href="mailto:mielgua@gmail.com?subject=Job%20Opportunity" class="btn btn-primary">Email Me</a>
+        <a href="https://www.linkedin.com/in/dayna-l66/" target="_blank" rel="noopener" class="btn btn-outline">Connect on LinkedIn</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <div class="footer-brand">Dayna Lee</div>
+          <div class="footer-tagline">Analytic Mind, Empathetic Lens</div>
+        </div>
+        <div class="footer-links">
+          <a href="https://www.linkedin.com/in/dayna-l66/" target="_blank" rel="noopener" class="footer-link">LinkedIn</a>
+          <a href="https://mielgua.substack.com/" target="_blank" rel="noopener" class="footer-link">Blog</a>
+          <a href="https://docs.google.com/document/d/1DQIKlRfyf2YotkyVea__JlsTfCVaG2ujCqBd5CzeBU8/export?format=pdf" target="_blank" rel="noopener" class="footer-link">Download CV</a>
+          <a href="mailto:mielgua@gmail.com?subject=Job%20Opportunity" class="footer-link">mielgua@gmail.com</a>
+        </div>
+      </div>
+      <div class="footer-greeting">hi :) I'm happy you're here!</div>
+      <div class="footer-copy">© 2026 Dayna Lee</div>
+    </div>
+  </footer>
+
+</body>
+</html>
