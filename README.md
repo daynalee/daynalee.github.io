@@ -28,13 +28,10 @@ Also here: [About](https://daynalee.github.io/about.html) and
 
 ## Related projects
 
-Two working prototypes of tooling for the roles I work in:
+A working prototype of tooling for the roles I work in:
 
-- [**Deal Desk**](https://github.com/daynalee/partnerships), pipeline, deal rooms, and a live
-  deal economics modeler for strategic partnerships.
-  [Demo](https://daynalee.github.io/partnerships/)
-- [**Dayna's Dashboard**](https://github.com/daynalee/client-partner), automated account
-  analysis and meeting prep for ad sales.
+- [**Dayna's Dashboard**](https://github.com/daynalee/client-partner), a fashion and apparel
+  advertiser health dashboard with automated account analysis and meeting prep for ad sales.
   [Demo](https://daynalee.github.io/client-partner/)
 
 ## How it is built
