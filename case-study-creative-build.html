@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Building a Playable to Lift Advertiser Performance | Dayna Lee</title>
+  <meta name="description" content="How I build a playable ad for an advertiser end to end: spec check, a reusable build skill, asset generation matched to the game's art style, competitor creative research, then iteration on mechanics, music, and tap feedback. Two live playables included." />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="alternate icon" href="favicon-32.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Dayna Lee" />
+  <meta property="og:title" content="Building a Playable to Lift Advertiser Performance | Dayna Lee" />
+  <meta property="og:description" content="How I build a playable ad for an advertiser end to end: spec check, a reusable build skill, asset generation matched to the game's art style, competitor creative research, then iteration on mechanics, music, and tap feedback." />
+  <meta property="og:url" content="https://daynalee.github.io/case-study-creative-build.html" />
+  <meta property="og:image" content="https://daynalee.github.io/images/og-preview.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Dayna Lee. Analytic Mind, Empathetic Lens." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Dayna Lee</a>
+      <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="case-studies.html" class="active">Case Studies</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="experience.html">Experience</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="cs-hero">
+    <div class="container">
+      <a href="case-studies.html" class="cs-back">← All Case Studies</a>
+      <div class="cs-hero-grid">
+        <div>
+          <div class="section-label">Creative Strategy</div>
+          <h1>Building a Playable to Lift Advertiser Performance</h1>
+          <p class="cs-lede">When an advertiser's creative stops working, the usual answer is to wait on a production cycle. I stopped waiting. This is the process I use to build a working playable myself, from spec check through concept research to the small iteration decisions that decide whether it converts. Both playables below are mine and both run live in your browser.</p>
+          <div class="cs-tags">
+            <span class="cs-tag">Playables</span>
+            <span class="cs-tag">Creative Strategy</span>
+            <span class="cs-tag">MRAID</span>
+            <span class="cs-tag">Advertiser Growth</span>
+          </div>
+        </div>
+        <div class="cs-hero-side">
+          <div class="cs-metric-card">
+            <div class="big">5 built</div>
+            <div class="sub">Live Playables</div>
+          </div>
+          <div class="cs-meta">
+            <div class="row"><b>Role:</b> Client Partner</div>
+            <div class="row"><b>Team:</b> Advertiser Growth</div>
+            <div class="row"><b>Format:</b> Single file MRAID 3.0</div>
+            <div class="row"><b>Partners:</b> Advertisers, Creative, Ad Moderation</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- BODY -->
+  <div class="container">
+    <div class="cs-body">
+
+      <div class="cs-skim">
+        <div><div class="k">Situation</div><div class="v">An advertiser's creative is fatiguing and the next production cycle is weeks out. The performance gap opens now, not later.</div></div>
+        <div><div class="k">Action</div><div class="v">Build the playable myself: check every spec first, encode the specs as a reusable skill, research what is winning in the category, then iterate on mechanic, art match, audio, and tap feedback.</div></div>
+        <div><div class="k">Result</div><div class="v">A working, moderation ready playable in days instead of weeks, and a concrete artifact to put in front of the advertiser rather than a slide about one.</div></div>
+      </div>
+
+      <section class="cs-row">
+        <div class="cs-row-label">Overview</div>
+        <div class="cs-row-content">
+          <p>Creative is usually the single biggest lever on an advertiser's performance and the slowest one to pull. A client partner spots the fatigue, writes the recommendation, and then everyone waits on a creative queue. By the time an asset arrives, the diagnosis is stale.</p>
+          <p>So I learned to build them. Not to replace a creative team, but to get a real, testable playable in front of an advertiser fast enough that the recommendation still matters. A working prototype also changes the conversation. It is much easier to get an advertiser to greenlight a direction they have already played than one they have seen on a slide.</p>
+        </div>
+      </section>
+
+      <section class="cs-row">
+        <div class="cs-row-label">Context</div>
+        <div class="cs-row-content">
+          <h3>Problem Statement</h3>
+          <p>Playables outperform static and video for most casual titles, but they are the hardest format to produce and the easiest to get rejected in ad moderation. Advertisers under-invest in them for exactly that reason. The blocker is rarely the idea. It is the distance between the idea and a file that actually passes spec and runs on a five year old Android phone.</p>
+          <h3>My Role</h3>
+          <p>I do the diagnosis, the concept research, and the build. Cleared brand assets and final approval come from the advertiser. Anything shipping to a live campaign goes through our creative and moderation teams. What I own is the first working version and the direction it proves.</p>
+        </div>
+      </section>
+
+      <section class="cs-row">
+        <div class="cs-row-label">The Build Process</div>
+        <div class="cs-row-content">
+          <h3>1. Check every parameter before writing anything</h3>
+          <p>Specs first, always. File size ceiling, single file packaging with every asset inlined, MRAID 3.0 handshake and close behavior, orientation support, the minimum OS the network still serves, click through handling, and the install call to action placement. Every one of these is a rejection reason, and every one is cheaper to satisfy at the start than to retrofit. A beautiful playable that is 400 kilobytes over the cap is a beautiful playable nobody sees.</p>
+
+          <h3>2. Encode the specs as a reusable skill</h3>
+          <p>I only wanted to learn the constraint list once. So I built the spec check, the packaging rules, and the compliance validation into a reusable build skill. Every playable now starts already compliant, and the interesting work starts at the concept instead of at the file format. This is the same instinct as the recommendation tracker on my <a href="case-study-demand-growth.html" class="all-link">demand growth account</a>: if I do something more than twice, it becomes a process rather than a memory.</p>
+
+          <h3>3. Research what is already winning</h3>
+          <p>Before designing a mechanic I go look at what is running in the category and what is scaling. I am reading for three things: which interaction the category has trained players to expect, which hook shows up in the first two seconds of the top performers, and where there is a gap I can take. Playables in a category converge fast, so the useful question is usually not "what is best" but "what is everyone doing that I can do differently without confusing the player."</p>
+
+          <h3>4. Generate assets that match the game's art style</h3>
+          <p>This is where most quick-turn playables fall apart. An ad that does not look like the game it advertises creates a mismatch the player feels at install, and it shows up as bad post install retention rather than bad click through, so it is easy to miss. I sample the palette from the advertiser's own creative and build new assets against it, then hold every generated element to the game's actual art direction: line weight, corner radius, type treatment, lighting. The Flourish build below has its palette sampled directly from the client's own creative for exactly this reason.</p>
+
+          <h3>5. Build, then iterate on the small things</h3>
+          <p>The first working version is the starting point, not the deliverable. What I iterate on:</p>
+          <ul>
+            <li><span class="sub-label">The mechanic itself:</span> is the first tap obvious within one second, with no instruction read</li>
+            <li><span class="sub-label">Tap feedback:</span> the glow, the particle, the scale bounce on touch. This is the difference between an ad that feels like a game and one that feels like a form</li>
+            <li><span class="sub-label">Audio:</span> music bed and the confirmation sound on a successful action, with the whole thing still working silently, because most impressions are muted</li>
+            <li><span class="sub-label">Pacing to the end card:</span> how fast the player reaches a win state and how the install call to action arrives, rewarding rather than interrupting</li>
+            <li><span class="sub-label">Failure states:</span> what happens on a wrong tap. A playable that can be lost is a playable that gets abandoned</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="cs-row">
+        <div class="cs-row-label">Build One</div>
+        <div class="cs-row-content">
+          <h3>Flourish, Haunt the Plaza</h3>
+          <p>A seasonal build for a garden design title. The mechanic is a single tap on a glowing plot that reveals a decorated transformation, which mirrors the game's actual core loop of placing and seeing the result. Palette sampled from the client's own creative so the ad reads as part of the game rather than as an ad about it. Packaged as one file under the size cap, MRAID 3.0, and written to render on an Android 4.4 and iOS 9 floor.</p>
+          <div class="cs-playable">
+            <div class="cs-playable-stage">
+              <iframe src="playables/flourish-haunt-the-plaza.html" title="Flourish, Haunt the Plaza playable ad" loading="lazy"></iframe>
+            </div>
+            <p class="cs-playable-cap">Playable, tap the glowing spot in the garden. <a href="playables/flourish-haunt-the-plaza.html" target="_blank" rel="noopener" class="all-link">Open full screen</a></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="cs-row">
+        <div class="cs-row-label">Build Two</div>
+        <div class="cs-row-content">
+          <h3>Perfect365, four concepts in parallel</h3>
+          <p>For a beauty title I built four different mechanics rather than one, because the useful question at the concept stage is which interaction the category responds to, and that is a test rather than an opinion. Each explores a different hook: a decision, a reveal, a matching task, and a personality quiz. Once the spec work is a skill, building four costs barely more than building one, and the advertiser gets a real choice instead of a single take it or leave it asset.</p>
+          <div class="cs-playable">
+            <div class="cs-playable-tabs" id="p365tabs">
+              <button data-src="playables/perfect365/should_i_cut_it.html" class="on">Should I Cut It?</button>
+              <button data-src="playables/perfect365/glow_up_reveal.html">Glow Up Reveal</button>
+              <button data-src="playables/perfect365/match_the_look.html">Match the Look</button>
+              <button data-src="playables/perfect365/which_look_are_you.html">Which Look Are You?</button>
+            </div>
+            <div class="cs-playable-stage">
+              <iframe id="p365frame" src="playables/perfect365/should_i_cut_it.html" title="Perfect365 playable concept" loading="lazy"></iframe>
+            </div>
+            <p class="cs-playable-cap">Four concept prototypes. These use my own test frames as placeholder imagery, not cleared client photography, which is the correct state for a concept round. <a href="playables/perfect365/should_i_cut_it.html" target="_blank" rel="noopener" class="all-link" id="p365full">Open full screen</a></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="cs-row">
+        <div class="cs-row-label">Challenges</div>
+        <div class="cs-row-content">
+          <ul>
+            <li><span class="sub-label">The size cap fights the art:</span> every asset is inlined into one file, so the quality of the art and the weight of the file are in direct tension. Most of the real engineering is compression decisions.</li>
+            <li><span class="sub-label">Old device floors:</span> networks still serve very old operating systems. Modern conveniences like CSS custom properties are not safely available, so the code is written more plainly than it would be for the web.</li>
+            <li><span class="sub-label">Brand clearance is a real gate:</span> a concept build can use placeholders, but nothing reaches a live campaign without cleared assets and advertiser sign off. Keeping that line clear is part of the job.</li>
+            <li><span class="sub-label">Honest limits:</span> I am a client partner who builds, not a creative director. These are prototypes that prove a direction. Production polish and final asset work belong with the creative team.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="cs-row">
+        <div class="cs-row-label">Results</div>
+        <div class="cs-row-content">
+          <ul>
+            <li>A working playable in days rather than a creative queue measured in weeks, so the recommendation lands while the diagnosis is still live</li>
+            <li>A reusable build skill that makes every subsequent playable compliant by default, so the effort goes into the concept instead of the packaging</li>
+            <li>Four parallel concepts for one advertiser, turning a creative opinion into a creative test</li>
+            <li>A tangible artifact for the conversation. Handing an advertiser something they can play is a fundamentally different ask than showing them a mock</li>
+          </ul>
+          <p>The broader point is the one I keep landing on: the client partners who move accounts are the ones who shorten the distance between spotting a problem and putting something real in front of the client.</p>
+        </div>
+      </section>
+
+      <div class="cs-nav">
+        <a href="case-study-demand-growth.html" class="btn btn-outline">← Demand Growth Case</a>
+        <a href="case-studies.html" class="btn btn-primary">All Case Studies →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA BAND -->
+  <div class="container">
+    <div class="cta-band">
+      <h2>Let's connect</h2>
+      <p>Looking for Client Partner roles in NYC or remote (EST).</p>
+      <div class="cta-actions">
+        <a href="mailto:mielgua@gmail.com?subject=Job%20Opportunity" class="btn btn-primary">Email Me</a>
+        <a href="https://www.linkedin.com/in/dayna-l66/" target="_blank" rel="noopener" class="btn btn-outline">Connect on LinkedIn</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <div class="footer-brand">Dayna Lee</div>
+          <div class="footer-tagline">Analytic Mind, Empathetic Lens</div>
+        </div>
+        <div class="footer-links">
+          <a href="https://www.linkedin.com/in/dayna-l66/" target="_blank" rel="noopener" class="footer-link">LinkedIn</a>
+          <a href="https://mielgua.substack.com/" target="_blank" rel="noopener" class="footer-link">Blog</a>
+          <a href="https://docs.google.com/document/d/1DQIKlRfyf2YotkyVea__JlsTfCVaG2ujCqBd5CzeBU8/export?format=pdf" target="_blank" rel="noopener" class="footer-link">Download CV</a>
+          <a href="mailto:mielgua@gmail.com?subject=Job%20Opportunity" class="footer-link">mielgua@gmail.com</a>
+        </div>
+      </div>
+      <div class="footer-greeting">hi :) I'm happy you're here!</div>
+      <div class="footer-copy">© 2026 Dayna Lee</div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var tabs = document.querySelectorAll('#p365tabs button');
+      var frame = document.getElementById('p365frame');
+      var full = document.getElementById('p365full');
+      for (var i = 0; i < tabs.length; i++) {
+        tabs[i].addEventListener('click', function (e) {
+          for (var k = 0; k < tabs.length; k++) { tabs[k].className = ''; }
+          e.currentTarget.className = 'on';
+          var src = e.currentTarget.getAttribute('data-src');
+          frame.src = src;
+          full.href = src;
+        });
+      }
+    })();
+  </script>
+
+</body>
+</html>
